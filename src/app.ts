@@ -5,7 +5,9 @@ import tutorRoutes from "./routes/tutors";
 
 const app = express();
 
-app.use(json());
+// middlewares
+
+app.use(json()); // parse the req body
 
 // Main rotas
 
