@@ -1,8 +1,12 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
 import express, { Request, Response, NextFunction } from "express";
 import { json } from "body-parser";
 
 import tutorRoutes from "./routes/tutors";
-import petRoutes from "./routes/pet";
+import petRoutes from "./routes/pets";
 
 const app = express();
 
@@ -21,6 +25,9 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   res.status(500).json({ message: err.message });
 });
 
-// Port 3000
+// SERVER API port config - 3000 (default)
 
-app.listen(3000);
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server listening on port: ${port}`);
+});
