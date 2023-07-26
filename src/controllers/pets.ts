@@ -1,15 +1,16 @@
-import { RequestHandler } from "express"; // (req: Request, res: Response, next: NextFunction) //
+import { RequestHandler } from "express";
 
 import { TUTORS } from "./tutors";
 
 import { Tutor } from "../models/tutor";
 import { Pet } from "../models/pet";
 
-// POST/pet/:tutorId-> Creates a pet and adds it to a tutor.
-
-export const createPet: RequestHandler = (req, res, next) => {
-  //
-  const tutorId = req.params.id;
+export const createPet: RequestHandler<{ petID: string }> = (
+  req,
+  res,
+  next
+) => {
+  const tutorId = req.params.petID;
   const tutorIndex = TUTORS.findIndex((tutor) => tutor.id === tutorId);
 
   if (tutorIndex < 0) {
@@ -69,17 +70,14 @@ export const createPet: RequestHandler = (req, res, next) => {
   res.status(201).json(TUTORS[tutorIndex]);
 };
 
-// PUT/pet/:petId/tutor/:tutorId -> updates a pet's info
-
 export const updatePet: RequestHandler<{ tutorID: string; petID: string }> = (
   req,
   res,
   next
 ) => {
-  //
   const tutorId = req.params.tutorID;
   const petId = req.params.petID;
-  //
+
   const updatedName = (req.body as { name: string }).name;
 
   const updatedPhone = (req.body as { phone: string }).phone;
@@ -119,8 +117,6 @@ export const updatePet: RequestHandler<{ tutorID: string; petID: string }> = (
 
   res.json({ message: "Updated!", updatedTutor: TUTORS[tutorIndex] });
 };
-
-// DELETE/pet/:petId/tutor/:tutorId -> deletes a pet from a tutor.
 
 export const deletePet: RequestHandler<{ tutorID: string; petID: string }> = (
   req,

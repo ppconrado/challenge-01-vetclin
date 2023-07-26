@@ -1,14 +1,11 @@
-import { RequestHandler } from "express"; // (req: Request, res: Response, next: NextFunction) //
+import { RequestHandler } from "express";
 
 import { Tutor } from "../models/tutor";
 import { Pet } from "../models/pet";
 
 export const TUTORS: Tutor[] = [];
 
-// POST/tutor -> Create a new tutor.
-
 export const createTutor: RequestHandler = (req, res, next) => {
-  //
   const name = (
     req.body as {
       name: string;
@@ -38,9 +35,8 @@ export const createTutor: RequestHandler = (req, res, next) => {
     }
   ).zip_code;
 
-  //
   const pets = new Array<Pet>();
-  //
+
   const newTutor = new Tutor(
     Math.random().toString(),
     name,
@@ -53,24 +49,20 @@ export const createTutor: RequestHandler = (req, res, next) => {
 
   TUTORS.push(newTutor);
 
-  // res
-  //   .status(201)
-  //   .json({ message: "Created the tutor.", createdTutor: newTutor });
   res.status(201).json(newTutor);
 };
 
-// GET /tutors -> Retrieves all tutors.
-
 export const getTutors: RequestHandler = (req, res, next) => {
-  // res.json({ tutors: TUTORS });
   res.json(TUTORS);
 };
 
-// PUT/tutor/:id -> Updates a tutor.
-
-export const updateTutor: RequestHandler<{ id: string }> = (req, res, next) => {
+export const updateTutor: RequestHandler<{ tutorID: string }> = (
+  req,
+  res,
+  next
+) => {
   //
-  const tutorId = req.params.id;
+  const tutorId = req.params.tutorID;
 
   const updatedName = (req.body as { name: string }).name;
 
@@ -92,7 +84,7 @@ export const updateTutor: RequestHandler<{ id: string }> = (req, res, next) => {
   }
 
   TUTORS[tutorIndex] = new Tutor(
-    TUTORS[tutorIndex].id,
+    tutorId,
     updatedName,
     updatedPhone,
     updateEmail,
@@ -104,11 +96,12 @@ export const updateTutor: RequestHandler<{ id: string }> = (req, res, next) => {
   res.json({ message: "Updated!", updatedTutor: TUTORS[tutorIndex] });
 };
 
-// DELETE/tutor/:id -> Deletes a tutor.
-
-export const deleteTutor: RequestHandler = (req, res, next) => {
-  //
-  const tutorId = req.params.id;
+export const deleteTutor: RequestHandler<{ tutorID: string }> = (
+  req,
+  res,
+  next
+) => {
+  const tutorId = req.params.tutorID;
 
   const tutorIndex = TUTORS.findIndex((tutor) => tutor.id === tutorId);
 
