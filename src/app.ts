@@ -10,22 +10,22 @@ import petRoutes from "./routes/pets";
 
 const app = express();
 
-// middlewares
+// Middlewares //
 
 app.use(json()); // parse the req body
 
-// Main rotas
+// Main rotas //
 
 app.use("/", tutorRoutes);
 app.use("/pet", petRoutes);
 
-// Error handler
+// Error handler //
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   res.status(500).json({ message: err.message });
 });
 
-// SERVER API port config - 3000 (default)
+// SERVER API port config - 3000 (default) //
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

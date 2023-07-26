@@ -21,10 +21,10 @@ router.post("/tutor", createTutor);
 
 router.put("/tutor/:id", updateTutor);
 
-// // DELETE/tutor/:id -> Deletes a tutor.
+// DELETE/tutor/:id -> Deletes a tutor.
 
 router.delete("/tutor/:id", deleteTutor);
 
 export default router;
 
-//// app.use("/", tutorRoutes); - main rota
+// app.use("/", tutorRoutes); - main rota //
