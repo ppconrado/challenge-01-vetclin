@@ -4,7 +4,7 @@ export class Pet {
     public name: string,
     public species: string,
     public carry: string,
-    public weight: number,
+    public weight: string,
     public date_of_birth: string
   ) {}
 }

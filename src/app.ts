@@ -2,6 +2,7 @@ import express, { Request, Response, NextFunction } from "express";
 import { json } from "body-parser";
 
 import tutorRoutes from "./routes/tutors";
+import petRoutes from "./routes/pet";
 
 const app = express();
 
@@ -11,7 +12,8 @@ app.use(json()); // parse the req body
 
 // Main rotas
 
-app.use("/tutors", tutorRoutes);
+app.use("/", tutorRoutes);
+app.use("/pet", petRoutes);
 
 // Error handler
 

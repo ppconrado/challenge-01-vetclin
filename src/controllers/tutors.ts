@@ -1,8 +1,9 @@
 import { RequestHandler } from "express"; // (req: Request, res: Response, next:NextFunction)
 
 import { Tutor } from "../models/tutor";
+import { Pet } from "../models/pet";
 
-const TUTORS: Tutor[] = [];
+export const TUTORS: Tutor[] = [];
 
 /////////////////////////// POST/tutor -> Create a new tutor.
 
@@ -36,6 +37,9 @@ export const createTutor: RequestHandler = (req, res, next) => {
       zip_code: string;
     }
   ).zip_code;
+  //
+  // const pets = Array<Pet>
+  const pets = new Array<Pet>();
 
   const newTutor = new Tutor(
     Math.random().toString(),
@@ -43,20 +47,23 @@ export const createTutor: RequestHandler = (req, res, next) => {
     phone,
     email,
     date_of_birth,
-    zip_code
+    zip_code,
+    pets
   );
 
   TUTORS.push(newTutor);
 
-  res
-    .status(201)
-    .json({ message: "Created the tutor.", createdTutor: newTutor });
+  // res
+  //   .status(201)
+  //   .json({ message: "Created the tutor.", createdTutor: newTutor });
+  res.status(201).json(newTutor);
 };
 
 ///////////////////// GET /tutors -> Retrieves all tutors.
 
 export const getTutors: RequestHandler = (req, res, next) => {
-  res.json({ tutors: TUTORS });
+  // res.json({ tutors: TUTORS });
+  res.json(TUTORS);
 };
 
 ///////////////////// PUT/tutor/:id -> Updates a tutor.
@@ -71,6 +78,7 @@ export const updateTutor: RequestHandler<{ id: string }> = (req, res, next) => {
   const updatedDateOfBirth = (req.body as { date_of_birth: string })
     .date_of_birth;
   const updatedZipCode = (req.body as { zip_code: string }).zip_code;
+  const updatedPets = (req.body as { pets: Pet[] }).pets;
 
   const tutorIndex = TUTORS.findIndex((tutor) => tutor.id === tutorId);
 
@@ -84,7 +92,8 @@ export const updateTutor: RequestHandler<{ id: string }> = (req, res, next) => {
     updatedPhone,
     updateEmail,
     updatedDateOfBirth,
-    updatedZipCode
+    updatedZipCode,
+    updatedPets
   );
 
   res.json({ message: "Updated!", updatedTutor: TUTORS[tutorIndex] });
@@ -98,7 +107,7 @@ export const deleteTutor: RequestHandler = (req, res, next) => {
   const tutorIndex = TUTORS.findIndex((tutor) => tutor.id === tutorId);
 
   if (tutorIndex < 0) {
-    throw new Error("Could not find todo!");
+    throw new Error("Could not find tutor!");
   }
 
   TUTORS.splice(tutorIndex, 1);

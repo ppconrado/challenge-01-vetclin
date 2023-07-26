@@ -9,12 +9,22 @@ import {
 
 const router = Router();
 
-router.post("/", createTutor);
+// GET /tutors -> Retrieves all tutors.
 
-router.get("/", getTutors);
+router.get("/tutors", getTutors);
 
-router.put("/:id", updateTutor);
+// POST/tutor -> Create a new tutor.
 
-router.delete("/:id", deleteTutor);
+router.post("/tutor", createTutor);
+
+// PUT/tutor/:id -> Updates a tutor.
+
+router.put("/tutor/:id", updateTutor);
+
+// // DELETE/tutor/:id -> Deletes a tutor.
+
+router.delete("/tutor/:id", deleteTutor);
 
 export default router;
+
+//// app.use("/", tutorRoutes); - main rota
