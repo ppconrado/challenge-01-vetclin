@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "5aff6931-9bc1-40b8-8fc7-be80821e8e67",
+		"name": "Challenge 01-VetClin-Jose-Conrado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14456411"
+	},
+	"item": [
+		{
+			"name": "Retrieves All Tutors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/tutors",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tutors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a New Tutor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"name\": \"Maciel\",\r\n \"phone\": \"85989323895\",\r\n \"email\": \"jonas@paidepet.com\",\r\n \"date_of_birth\": \"1993-12-12 10:10\",\r\n \"zip_code\": \"61760000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/tutor",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tutor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updates a Tutor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"id\": \"0.4177081782150702\",\r\n            \"name\": \"Jose Paulo\",\r\n            \"phone\": \"85989323895\",\r\n            \"email\": \"jonas@paidepet.com\",\r\n            \"date_of_birth\": \"1993-12-12 10:10\",\r\n            \"zip_code\": \"61760000\",\r\n            \"pets\": []\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/tutor/0.20647220247929687",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tutor",
+						"0.20647220247929687"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletes a Tutor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/tutor/0.678008883849005",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tutor",
+						"0.678008883849005"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creates a Pet & Adds a Tutor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"name\": \"Babao\",\r\n \"species\": \"dog\",\r\n \"carry\": \"p\",\r\n \"weight\": \"5\",\r\n \"date_of_birth\": \"1993-12-12 10:10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/pet/0.6603215923351025",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"pet",
+						"0.6603215923351025"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updates a Pet's Info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"0.2779526141310724\",\r\n        \"name\": \"Jonas\",\r\n        \"phone\": \"85989323895\",\r\n        \"email\": \"jonas@paidepet.com\",\r\n        \"date_of_birth\": \"1993-12-12 10:10\",\r\n        \"zip_code\": \"61760000\",\r\n        \"pets\": [\r\n            {\r\n                \"id\": \"0.8120520724474589\",\r\n                \"name\": \"Scub\",\r\n                \"species\": \"dog\",\r\n                \"carry\": \"p\",\r\n                \"weight\": \"5\",\r\n                \"date_of_birth\": \"1993-12-12 10:10\"\r\n            },\r\n            {\r\n                \"id\": \"0.5326061024894158\",\r\n                \"name\": \"Alceu\",\r\n                \"species\": \"dog\",\r\n                \"carry\": \"p\",\r\n                \"weight\": \"50\",\r\n                \"date_of_birth\": \"1993-12-12 10:10\"\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/pet/0.5326061024894158/tutor/0.2779526141310724",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"pet",
+						"0.5326061024894158",
+						"tutor",
+						"0.2779526141310724"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletes a Pet from a Tutor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/pet/0.2974221432771609/tutor/0.6603215923351025",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"pet",
+						"0.2974221432771609",
+						"tutor",
+						"0.6603215923351025"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}
