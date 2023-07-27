@@ -36,7 +36,7 @@ export const createPet: RequestHandler<{ petID: string }> = (
   ).carry;
   const weight = (
     req.body as {
-      weight: string;
+      weight: number;
     }
   ).weight;
 
