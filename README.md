@@ -43,3 +43,7 @@ tsc -w
 ```
 npm start
 ```
+
+## Class Diagram
+
+![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin-class-diagram.png)
