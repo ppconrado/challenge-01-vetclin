@@ -55,9 +55,19 @@ export const createTutor: RequestHandler = async (req, res, next) => {
   // TUTORS.push(newTutor);
 };
 
-export const getTutors: RequestHandler = (req, res, next) => {
-  const tutors = Tutor.find({});
-  res.json(tutors);
+export const getTutors: RequestHandler = async (req, res, next) => {
+  Tutor.find()
+    .then((tutors) => {
+      res.status(200).json(tutors);
+    })
+    .catch((err) => {
+      res
+        .status(500)
+        .json({
+          message:
+            err.message || "Some error occurred while retrieving tutors.",
+        });
+    });
 };
 
 // export const updateTutor: RequestHandler<{ tutorID: string }> = (
