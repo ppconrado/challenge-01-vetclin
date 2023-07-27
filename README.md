@@ -10,6 +10,10 @@ so the sales and management team can have the primary technical view of the need
 that the client has.
 ```
 
+## Class Diagram
+
+![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin-class-diagram.png)
+
 ## Features
 
 ## Create a REST API following the requested patterns:
@@ -43,7 +47,3 @@ tsc -w
 ```
 npm start
 ```
-
-## Class Diagram
-
-![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin-class-diagram.png)
