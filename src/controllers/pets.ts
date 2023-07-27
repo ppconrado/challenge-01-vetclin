@@ -115,7 +115,12 @@ export const updatePet: RequestHandler<{ tutorID: string; petID: string }> = (
     updatePets
   );
 
-  res.json({ message: "Updated!", updatedTutor: TUTORS[tutorIndex] });
+  TUTORS[tutorIndex].pets[petIndex];
+
+  res.json({
+    message: "Updated!",
+    updatedPet: TUTORS[tutorIndex].pets[petIndex],
+  });
 };
 
 export const deletePet: RequestHandler<{ tutorID: string; petID: string }> = (
