@@ -2,14 +2,14 @@ import { Router } from "express";
 
 import {
   createTutor,
-  // getTutors,
+  getTutors,
   // updateTutor,
   // deleteTutor,
 } from "../controllers/tutors";
 
 const router = Router();
 
-// router.get("/tutors", getTutors);
+router.get("/tutors", getTutors);
 
 router.post("/tutor", createTutor);
 

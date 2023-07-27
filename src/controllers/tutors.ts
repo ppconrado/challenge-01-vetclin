@@ -3,8 +3,6 @@ import { RequestHandler } from "express";
 import { Tutor } from "../models/tutor";
 import { Pet } from "../models/pet";
 
-// export const TUTORS: Tutor[] = [];
-
 export const createTutor: RequestHandler = async (req, res, next) => {
   const name = (
     req.body as {
@@ -57,9 +55,10 @@ export const createTutor: RequestHandler = async (req, res, next) => {
   // TUTORS.push(newTutor);
 };
 
-// export const getTutors: RequestHandler = (req, res, next) => {
-//   res.json(TUTORS);
-// };
+export const getTutors: RequestHandler = (req, res, next) => {
+  const tutors = Tutor.find({});
+  res.json(tutors);
+};
 
 // export const updateTutor: RequestHandler<{ tutorID: string }> = (
 //   req,
