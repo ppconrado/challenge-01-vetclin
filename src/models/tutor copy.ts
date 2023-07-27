@@ -13,7 +13,7 @@ interface ITutor {
 }
 
 // 2. Create a Schema corresponding to the document interface.
-const tutorSchema = new Schema<ITutor>({
+export const tutorSchema = new Schema<ITutor>({
   name: { type: String, required: true },
   phone: { type: String, required: true },
   email: { type: String, required: true },
@@ -28,7 +28,7 @@ const tutorSchema = new Schema<ITutor>({
 });
 
 // 3. Create a Model.
-const Tutor = model<ITutor>("Tutor", tutorSchema);
+export const Tutor = model<ITutor>("Tutor", tutorSchema);
 
 // export class Tutor {
 //   constructor(
