@@ -39,17 +39,9 @@ export const createTutor: RequestHandler = async (req, res, next) => {
     // const { email, username, password } = req.body;
     const tutor = new Tutor({ name, phone, email, date_of_birth, zip_code });
     tutor.save();
-    // const registeredUser = await Tutor.register(user, password); // salt/hash - passport-local-mongoose
-    // login() = passport function para logar o usuario
-    // req.login(registeredUser, (err) => {
-    //   if (err) return next(err);
-    //   req.flash("success", "Bem Vindo ao Jose Paulo Camp!");
-    //   res.redirect("/campgrounds");
-    // });
     res.status(201).json(tutor);
   } catch (e) {
-    // req.flash("error", e.message);
-    // res.redirect("register");
+    //
   }
 
   // TUTORS.push(newTutor);
@@ -61,12 +53,9 @@ export const getTutors: RequestHandler = async (req, res, next) => {
       res.status(200).json(tutors);
     })
     .catch((err) => {
-      res
-        .status(500)
-        .json({
-          message:
-            err.message || "Some error occurred while retrieving tutors.",
-        });
+      res.status(500).json({
+        message: err.message || "Some error occurred while retrieving tutors.",
+      });
     });
 };
 

@@ -1,0 +1,151 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "defaultTitle",
+    "description": "defaultDescription",
+    "version": "0.1"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/tutors": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost:3000"
+          }
+        ]
+      },
+      "post": {
+        "description": "Auto generated using Swagger Inspector",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/tutors_body"
+              },
+              "examples": {
+                "0": {
+                  "value": "{\r\n \"name\": \"Jonas\",\r\n \"phone\": \"85989323895\",\r\n \"email\": \"jonas@paidepet.com\",\r\n \"date_of_birth\": \"1993-12-12 10:10\",\r\n \"zip_code\": \"61760000\"\r\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost:3000"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "http://localhost:3000"
+        }
+      ]
+    },
+    "/tutors/0.504482627068368": {
+      "put": {
+        "description": "Auto generated using Swagger Inspector",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost:3000"
+          }
+        ]
+      },
+      "delete": {
+        "description": "Auto generated using Swagger Inspector",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost:3000"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "http://localhost:3000"
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "tutors_body": {
+        "type": "object",
+        "properties": {
+          "phone": {
+            "type": "string"
+          },
+          "date_of_birth": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "zip_code": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
