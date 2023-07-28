@@ -4,7 +4,7 @@ import { createPet, updatePet, deletePet } from "../controllers/pets";
 
 const router = Router();
 
-router.post("/:petID", createPet);
+router.post("/:tutorID", createPet);
 
 router.put("/:petID/tutor/:tutorID", updatePet);
 
