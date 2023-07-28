@@ -42,9 +42,9 @@ that the client has.
 • Data Bank - RAM Computer Memory
 ```
 
-## ⚒⚒ - Node.Js Project Packages (npm)
+## 1 - ⚒⚒ Node.Js Project Packages (npm)
 
-## • Production Dependencies 🎉
+## 1.1 - Production Dependencies 🎉
 
 ### body-parser - version: 1.19.0
 
@@ -64,7 +64,7 @@ https://www.npmjs.com/package/dotenv/v/16.3.1
 https://www.npmjs.com/package/express/v/4.17.1
 ```
 
-## • Development Dependencies 📚
+## 1.2 - Development Dependencies 📚
 
 ### @types/express - version: 4.17.2
 
@@ -86,27 +86,27 @@ https://www.npmjs.com/package/nodemon/v/1.19.4
 
 # ⚙ Instructions to run the application locally
 
-## ⚙⚙ 1 - Project repository location
+## 1 - ⚙⚙ Project repository location
 
 ```
 https://github.com/ppconrado/challenge-01-vetclin
 ```
 
-## ⚙⚙ 2 - Setup enviroment variables:
+## 2 - ⚙⚙ Setup enviroment variables:
 
-### • server port configuration:
+### 2.1 - server port configuration 💻
 
-```
+````
 PORT=<server port>
 ```
 
-### • working enviroment configuration:
+### 2.2 - working enviroment configuration 🦺
 
 ```
 NODE_ENV=<dev-prod>
 ```
 
-## ⚙⚙ 3 - Setup typescript compiler options (tsconfig.json):
+## 3 - ⚙⚙ Setup typescript compiler options (tsconfig.json):
 
 ```json
 {
@@ -125,21 +125,21 @@ NODE_ENV=<dev-prod>
     "forceConsistentCasingInFileNames": true
   }
 }
-```
+````
 
-## ⚙⚙ 4 - Install projects dependencies (npm packages)
+## 4 - ⚙⚙ Install projects dependencies (npm packages)
 
 ```
 npm install
 ```
 
-## ⚙⚙ 5 - Compile TypeScript Project to JavaScript
+## 5 - ⚙⚙ Compile TypeScript Project to JavaScript
 
 ```
 tsc -w
 ```
 
-## ⚙⚙ 6 - Run the Project in JavaScript
+## 6 - ⚙⚙ Run the Project in JavaScript
 
 ```
 npm start
