@@ -39,9 +39,7 @@ that the client has.
 • Typescript
 • MVC - Model-View-Controller
 • npm - Packages Manager for Node.js
-• Data Bank - Computer Memory
-
-
+• Data Bank - RAM Computer Memory
 ```
 
 # Node.Js Project Packages (npm)
@@ -52,21 +50,18 @@ that the client has.
 
 ```
 https://www.npmjs.com/package/body-parser/v/1.19.0
-
 ```
 
 ### • dotenv - version: 16.3.1
 
 ```
 https://www.npmjs.com/package/dotenv/v/16.3.1
-
 ```
 
 ### • express - version: 4.17.1
 
 ```
 https://www.npmjs.com/package/express/v/4.17.1
-
 ```
 
 ## Development Dependencies
@@ -75,28 +70,24 @@ https://www.npmjs.com/package/express/v/4.17.1
 
 ```
 https://www.npmjs.com/package/@types/express/v/4.17.2
-
 ```
 
 ### • @types/node - version: 12.12.9
 
 ```
 https://www.npmjs.com/package/@types/node/v/12.12.9
-
 ```
 
 ### • nodemon - version: 1.19.4
 
 ```
 https://www.npmjs.com/package/nodemon/v/1.19.4
-
 ```
 
 # Repository location
 
 ```
 https://github.com/ppconrado/challenge-01-vetclin
-
 ```
 
 # Instructions: How to run the application locally
