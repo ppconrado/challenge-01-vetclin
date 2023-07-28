@@ -1,6 +1,6 @@
-# Challenge #01
+# Challenge #01 = Microservice Veterinary Franchise
 
-## Description
+# Description
 
 ```
 A client hired Compass to build a new microservice for its veterinary franchise. This microservice
@@ -10,13 +10,11 @@ so the sales and management team can have the primary technical view of the need
 that the client has.
 ```
 
-## Class Diagram
+# Class Diagram
 
 ![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin-class-diagram.png)
 
-## Features
-
-## Create a REST API following the requested patterns:
+# REST API Rotas
 
 ```
 • GET /tutors -> Retrieves all tutors.
@@ -28,7 +26,72 @@ that the client has.
 • DELETE/pet/:petId/tutor/:tutorId -> deletes a pet from a tutor.
 ```
 
-# Instructions
+# Technologies
+
+```
+• NodeJs.
+• Typescript.
+• MVC - Model-View-Contrller.
+• npm - Package manager for Node.js.
+
+```
+
+# NodeJs Project Packages (npm)
+
+## Production Dependencies
+
+### • body-parser - version: 1.19.0
+
+```
+https://www.npmjs.com/package/body-parser/v/1.19.0
+
+```
+
+### • dotenv - version: 16.3.1
+
+```
+https://www.npmjs.com/package/dotenv/v/16.3.1
+
+```
+
+### • express - version: 4.17.1
+
+```
+https://www.npmjs.com/package/express/v/4.17.1
+
+```
+
+## Development Dependencies
+
+### • @types/express - version: 4.17.2
+
+```
+https://www.npmjs.com/package/@types/express/v/4.17.2
+
+```
+
+### • @types/node - version: 12.12.9
+
+```
+https://www.npmjs.com/package/@types/node/v/12.12.9
+
+```
+
+### • nodemon - version: 1.19.4
+
+```
+https://www.npmjs.com/package/nodemon/v/1.19.4
+
+```
+
+## Repository location
+
+```
+https://github.com/ppconrado/challenge-01-vetclin
+
+```
+
+# Instructions: How to run the application locally.
 
 ## First: Install all projects dependencies (npm packages)
 
