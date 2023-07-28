@@ -16,7 +16,7 @@ export const createPet: RequestHandler<{ tutorID: string }> = (
   if (tutorIndex < 0) {
     throw new Error("Could not find tutor!");
   }
-  //
+
   const name = (
     req.body as {
       name: string;

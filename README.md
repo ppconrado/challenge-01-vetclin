@@ -92,6 +92,14 @@ https://github.com/ppconrado/challenge-01-vetclin
 
 # Instructions to run the application locally
 
+## Setup enviroment variables:
+
+```
+PORT=<server port>
+NODE_ENV=<dev-prod>
+
+```
+
 ## First: Install all projects dependencies (npm packages)
 
 ```
