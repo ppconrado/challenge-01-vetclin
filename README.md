@@ -28,11 +28,11 @@ that the client has.
 • DELETE/pet/:petId/tutor/:tutorId -> deletes a pet from a tutor.
 ```
 
-# Class Diagram
+# Use Case Diagram
 
 ![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin-use-case-diagram.png)
 
-# Technologies
+# Tools and Technologies
 
 ```
 • Node.Js
@@ -84,13 +84,13 @@ https://www.npmjs.com/package/@types/node/v/12.12.9
 https://www.npmjs.com/package/nodemon/v/1.19.4
 ```
 
-# Repository location
+# Project repository location
 
 ```
 https://github.com/ppconrado/challenge-01-vetclin
 ```
 
-# Instructions: How to run the application locally
+# Instructions to run the application locally
 
 ## First: Install all projects dependencies (npm packages)
 
