@@ -1,4 +1,6 @@
-# Challenge #01 = Microservice Veterinary Franchise
+# Challenge #01 - Microservice Veterinary Franchise
+
+![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/masterimg/vetclin.png)
 
 # Description
 
@@ -84,7 +86,7 @@ https://www.npmjs.com/package/nodemon/v/1.19.4
 
 ```
 
-## Repository location
+# Repository location
 
 ```
 https://github.com/ppconrado/challenge-01-vetclin
