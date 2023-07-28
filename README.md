@@ -32,7 +32,7 @@ that the client has.
 
 ![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin-use-case-diagram.png)
 
-# ⚒ Tools and Technologies
+# ⚙ Tools and Technologies
 
 ```
 • Node.Js
@@ -42,7 +42,7 @@ that the client has.
 • Data Bank - RAM Computer Memory
 ```
 
-## 1 - ⚒⚒ Node.Js Project Packages (npm)
+## 1 - ⚙⚙ Node.Js Project Packages (npm)
 
 ## 1.1 - Production Dependencies 🎉
 
@@ -86,13 +86,13 @@ https://www.npmjs.com/package/nodemon/v/1.19.4
 
 # ⚙ Instructions to run the application locally
 
-## 1 - ⚙⚙ Project repository location
+## 1 - ⚙ Project repository location
 
 ```
 https://github.com/ppconrado/challenge-01-vetclin
 ```
 
-## 2 - ⚙⚙ Setup enviroment variables:
+## 2 - ⚙ Setup enviroment variables:
 
 ### 2.1 - server port configuration 💻
 
@@ -106,40 +106,36 @@ PORT=<server port>
 NODE_ENV=<dev-prod>
 ```
 
-## 3 - ⚙⚙ Setup typescript compiler options (tsconfig.json):
+## 3 - ⚙ Setup typescript compiler options (tsconfig.json):
 
 ```json
 {
   "compilerOptions": {
-    /* Basic Options */
     "target": "es2018",
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "./dist",
     "rootDir": "./src",
-    /* Strict Type-Checking Options */
     "strict": true,
-    /* Module Resolution Options */
     "esModuleInterop": true,
-    /* Advanced Options */
     "forceConsistentCasingInFileNames": true
   }
 }
 ```
 
-## 4 - ⚙⚙ Install projects dependencies (npm packages)
+## 4 - ⚙ Install projects dependencies (npm packages)
 
 ```
 npm install
 ```
 
-## 5 - ⚙⚙ Compile TypeScript Project to JavaScript
+## 5 - ⚙ Compile TypeScript Project to JavaScript
 
 ```
 tsc -w
 ```
 
-## 6 - ⚙⚙ Run the Project in JavaScript
+## 6 - ⚙ Run the Project in JavaScript
 
 ```
 npm start
