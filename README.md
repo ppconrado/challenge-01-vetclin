@@ -28,6 +28,10 @@ that the client has.
 • DELETE/pet/:petId/tutor/:tutorId -> deletes a pet from a tutor.
 ```
 
+# Class Diagram
+
+![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin-use-case-diagram.png)
+
 # Technologies
 
 ```
