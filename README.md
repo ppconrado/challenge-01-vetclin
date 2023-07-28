@@ -1,11 +1,11 @@
-# Challenge #01 - Microservice Veterinary Franchise
+# Compass Challenge 01 - Microservice Veterinary Franchise
 
 ![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin.png)
 
 # Description
 
 ```
-A client hired Compass to build a new microservice for its veterinary franchise. This microservice
+    A client hired Compass to build a new microservice for its veterinary franchise. This microservice
 will be used by all the clinics they own for internal client and attendances management.
 So, you have this new mission, to build the POC foundations of this brand new microservice,
 so the sales and management team can have the primary technical view of the needs
@@ -31,10 +31,10 @@ that the client has.
 # Technologies
 
 ```
-• NodeJs.
-• Typescript.
-• MVC - Model-View-Contrller.
-• npm - Package manager for Node.js.
+• NodeJs
+• Typescript
+• MVC - Model-View-Controller
+• npm - Package Manager for Node.js
 
 ```
 
@@ -93,7 +93,7 @@ https://github.com/ppconrado/challenge-01-vetclin
 
 ```
 
-# Instructions: How to run the application locally.
+# Instructions: How to run the application locally
 
 ## First: Install all projects dependencies (npm packages)
 
