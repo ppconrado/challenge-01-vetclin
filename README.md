@@ -31,14 +31,16 @@ that the client has.
 # Technologies
 
 ```
-• NodeJs
+• Node.Js
 • Typescript
 • MVC - Model-View-Controller
-• npm - Package Manager for Node.js
+• npm - Packages Manager for Node.js
+• Data Bank - Computer Memory
+
 
 ```
 
-# NodeJs Project Packages (npm)
+# Node.Js Project Packages (npm)
 
 ## Production Dependencies
 
