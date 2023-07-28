@@ -32,7 +32,7 @@ that the client has.
 
 ![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin-use-case-diagram.png)
 
-# ⚒ Tools and Technologies
+# ⚙ Tools and Technologies
 
 ```
 • Node.Js
@@ -42,7 +42,7 @@ that the client has.
 • Data Bank - RAM Computer Memory
 ```
 
-## 1 - ⚒⚒ Node.Js Project Packages (npm)
+## 1 - ⚙⚙ Node.Js Project Packages (npm)
 
 ## 1.1 - Production Dependencies 🎉
 
@@ -111,17 +111,13 @@ NODE_ENV=<dev-prod>
 ```json
 {
   "compilerOptions": {
-    /* Basic Options */
     "target": "es2018",
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "./dist",
     "rootDir": "./src",
-    /* Strict Type-Checking Options */
     "strict": true,
-    /* Module Resolution Options */
     "esModuleInterop": true,
-    /* Advanced Options */
     "forceConsistentCasingInFileNames": true
   }
 }
