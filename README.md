@@ -42,7 +42,7 @@ that the client has.
 • Data Bank - RAM Computer Memory
 ```
 
-## 1 - ⚙⚙ Node.Js Project Packages (npm)
+## 1 - ⚙ Node.Js Project Packages (npm)
 
 ## 1.1 - Production Dependencies 🎉
 
