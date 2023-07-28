@@ -1,6 +1,6 @@
 # Challenge #01 - Microservice Veterinary Franchise
 
-![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/masterimg/vetclin.png)
+![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin.png)
 
 # Description
 
