@@ -125,7 +125,11 @@ NODE_ENV=<dev-prod>
     "forceConsistentCasingInFileNames": true
   }
 }
+<<<<<<< HEAD
 ````
+=======
+```
+>>>>>>> development
 
 ## 4 - ⚙⚙ Install projects dependencies (npm packages)
 
