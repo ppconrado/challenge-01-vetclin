@@ -32,7 +32,7 @@ that the client has.
 
 ![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin-use-case-diagram.png)
 
-# Tools and Technologies
+# ⚒ Tools and Technologies
 
 ```
 • Node.Js
@@ -42,77 +42,104 @@ that the client has.
 • Data Bank - RAM Computer Memory
 ```
 
-# Node.Js Project Packages (npm)
+## ⚒⚒ - Node.Js Project Packages (npm)
 
-## Production Dependencies
+## • Production Dependencies 🎉
 
-### • body-parser - version: 1.19.0
+### body-parser - version: 1.19.0
 
 ```
 https://www.npmjs.com/package/body-parser/v/1.19.0
 ```
 
-### • dotenv - version: 16.3.1
+### dotenv - version: 16.3.1
 
 ```
 https://www.npmjs.com/package/dotenv/v/16.3.1
 ```
 
-### • express - version: 4.17.1
+### express - version: 4.17.1
 
 ```
 https://www.npmjs.com/package/express/v/4.17.1
 ```
 
-## Development Dependencies
+## • Development Dependencies 📚
 
-### • @types/express - version: 4.17.2
+### @types/express - version: 4.17.2
 
 ```
 https://www.npmjs.com/package/@types/express/v/4.17.2
 ```
 
-### • @types/node - version: 12.12.9
+### @types/node - version: 12.12.9
 
 ```
 https://www.npmjs.com/package/@types/node/v/12.12.9
 ```
 
-### • nodemon - version: 1.19.4
+### nodemon - version: 1.19.4
 
 ```
 https://www.npmjs.com/package/nodemon/v/1.19.4
 ```
 
-# Project repository location
+# ⚙ Instructions to run the application locally
+
+## ⚙⚙ 1 - Project repository location
 
 ```
 https://github.com/ppconrado/challenge-01-vetclin
 ```
 
-# Instructions to run the application locally
+## ⚙⚙ 2 - Setup enviroment variables:
 
-## Setup enviroment variables:
+### • server port configuration:
 
 ```
 PORT=<server port>
-NODE_ENV=<dev-prod>
-
 ```
 
-## First: Install all projects dependencies (npm packages)
+### • working enviroment configuration:
+
+```
+NODE_ENV=<dev-prod>
+```
+
+## ⚙⚙ 3 - Setup typescript compiler options (tsconfig.json):
+
+```json
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es2018",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    /* Strict Type-Checking Options */
+    "strict": true,
+    /* Module Resolution Options */
+    "esModuleInterop": true,
+    /* Advanced Options */
+    "forceConsistentCasingInFileNames": true
+  }
+}
+```
+
+## ⚙⚙ 4 - Install projects dependencies (npm packages)
 
 ```
 npm install
 ```
 
-## Second: Compile TypeScript Project to JavaScript
+## ⚙⚙ 5 - Compile TypeScript Project to JavaScript
 
 ```
 tsc -w
 ```
 
-## Third: Run the Project in JavaScript
+## ⚙⚙ 6 - Run the Project in JavaScript
 
 ```
 npm start
