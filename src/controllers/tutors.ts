@@ -23,6 +23,7 @@ export const createTutor: RequestHandler = (req, res, next) => {
       email: string;
     }
   ).email;
+
   const date_of_birth = (
     req.body as {
       date_of_birth: string;
