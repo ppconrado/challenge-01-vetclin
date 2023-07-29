@@ -1,8 +1,8 @@
 import { Router } from "express";
 
 import {
-  createTutor,
   getTutors,
+  createTutor,
   updateTutor,
   deleteTutor,
 } from "../controllers/tutors";
