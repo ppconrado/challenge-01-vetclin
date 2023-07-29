@@ -174,7 +174,7 @@ npm start
 
 ### GET - Retrieves All Tutors - {{URL}}/tutors
 
-res.body ( Success Response - 200 OK )
+• res.body ( Success Response - 200 OK )
 
 ```json
 [
@@ -202,7 +202,7 @@ res.body ( Success Response - 200 OK )
 
 ### POST - Create a New Tutor - {{URL}}/tutor
 
-req.body
+• req.body
 
 ```json
 {
@@ -214,7 +214,7 @@ req.body
 }
 ```
 
-res.body ( Success Response - 201 Created )
+• res.body ( Success Response - 201 Created )
 
 ```json
 {
@@ -238,7 +238,7 @@ res.body ( Error Response - 500 Internal Server Error )
 
 ### PUT - Updates a Tutor - {{URL}}/tutor/0.42764763642531944
 
-req.body
+• req.body
 
 ```json
 {
@@ -250,7 +250,7 @@ req.body
 }
 ```
 
-res.body ( Success Response - 200 OK )
+• res.body ( Success Response - 200 OK )
 
 ```json
 {
@@ -276,7 +276,7 @@ res.body ( Success Response - 200 OK )
 }
 ```
 
-res.body ( Error Response - 500 Internal Server Error )
+• res.body ( Error Response - 500 Internal Server Error )
 
 ```json
 {
@@ -286,13 +286,15 @@ res.body ( Error Response - 500 Internal Server Error )
 
 ### DELETE - Deletes a Tutor - {{URL}}/tutor/0.44084269827947664
 
+• res.body ( Success Response - 200 OK )
+
 ```json
 {
   "message": "Tutor deleted!"
 }
 ```
 
-res.body ( Error Response - 500 Internal Server Error )
+• res.body ( Error Response - 500 Internal Server Error )
 
 ```json
 {
@@ -300,23 +302,9 @@ res.body ( Error Response - 500 Internal Server Error )
 }
 ```
 
-res.body
-
-```json
-{
-  "id": "0.42764763642531944",
-  "name": "Jonh Doe",
-  "phone": "85989323895",
-  "email": "jose.abreu@compasso.com",
-  "date_of_birth": "1993-12-12 10:10",
-  "zip_code": "61760000",
-  "pets": []
-}
-```
-
 ### POST - Creates a Pet & Adds a Tutor - {{URL}}/pet/0.42764763642531944
 
-req.body
+• req.body
 
 ```json
 {
@@ -328,7 +316,7 @@ req.body
 }
 ```
 
-res.body ( Success Response - 201 Created )
+• res.body ( Success Response - 201 Created )
 
 ```json
 {
@@ -349,38 +337,6 @@ res.body ( Success Response - 201 Created )
     }
   ]
 }
-```
-
----
-
-## GET
-
-Routes
-GET Routes
-Get all tutors: /tutors Example response
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Jonh Doe",
-    "phone": "85989323895",
-    "email": "jose.abreu@compasso.com",
-    "date_of_birth": "1993-12-12 10:10",
-    "zip_code": "61760000",
-    "pets": [
-      {
-        "id": 1,
-        "name": "Lilo",
-        "species": "dog",
-        "carry": "p",
-        "weight": 5,
-        "weight": 5,
-        "date_of_birth": "1993-12-12 10:10"
-      }
-    ]
-  }
-]
 ```
 
 # Next Steps
