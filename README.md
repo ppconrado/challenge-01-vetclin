@@ -172,7 +172,7 @@ npm start
 
 # Results
 
-## GET - Retrieves All Tutors {localhost:3000/tutors}
+### GET - Retrieves All Tutors - {{URL}}/tutors
 
 res.body ( success response - 200 OK )
 
@@ -200,7 +200,7 @@ res.body ( success response - 200 OK )
 ]
 ```
 
-## POST - Create a New Tutor {localhost:3000/tutor}
+### POST - Create a New Tutor - {{URL}}/tutor
 
 req.body
 
@@ -228,7 +228,7 @@ res.body ( success response - 201 Created )
 }
 ```
 
-res.body (error response - 500 Internal Server Error)
+res.body ( error response - 500 Internal Server Error )
 
 ```json
 {
@@ -236,7 +236,7 @@ res.body (error response - 500 Internal Server Error)
 }
 ```
 
-## PUT - Updates a Tutor {localhost:3000/tutor/0.42764763642531944}
+### PUT - Updates a Tutor - {{URL}}/tutor/0.42764763642531944
 
 req.body
 
@@ -250,13 +250,7 @@ req.body
 }
 ```
 
-```json
-{
-  "message": "Could not find tutor!"
-}
-```
-
-res.body
+res.body ( success response - 200 OK )
 
 ```json
 {
@@ -282,11 +276,27 @@ res.body
 }
 ```
 
-DELETE - Deletes a Tutor
+res.body ( error response - 500 Internal Server Error )
+
+```json
+{
+  "message": "Could not find tutor!"
+}
+```
+
+### DELETE - Deletes a Tutor - {{URL}}/tutor/0.44084269827947664
 
 ```json
 {
   "message": "Tutor deleted!"
+}
+```
+
+res.body ( error response - 500 Internal Server Error )
+
+```json
+{
+  "message": "Could not find tutor!"
 }
 ```
 
