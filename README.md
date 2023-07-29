@@ -42,9 +42,36 @@ that the client has.
 • Data Bank - RAM Computer Memory
 ```
 
+# Node Project
+
+```json
+{
+  "name": "challenge-01-vetclin--jose-conrado",
+  "version": "1.0.0",
+  "description": "Microservice Veterinary Franchise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon dist/app.js"
+  },
+  "author": "Jose Paulo Archetti Conrado",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^12.12.9",
+    "nodemon": "^1.19.4"
+  }
+}
+```
+
 ## 1 - Node.Js Project Packages (npm)
 
-## 1.1 - Production Dependencies 🎉
+## 1 . 1 - Production Dependencies 🎉
 
 ### body-parser - version: 1.19.0
 
@@ -64,7 +91,7 @@ https://www.npmjs.com/package/dotenv/v/16.3.1
 https://www.npmjs.com/package/express/v/4.17.1
 ```
 
-## 1.2 - Development Dependencies 📚
+## 1 . 2 - Development Dependencies 📚
 
 ### @types/express - version: 4.17.2
 
@@ -94,16 +121,16 @@ https://github.com/ppconrado/challenge-01-vetclin
 
 ## 2 - Setup enviroment variables:
 
-### 2.1 - Server port configuration 💻
+### 2 . 1 - Server port configuration 💻
 
 ```
-PORT=<server port>
+PORT=   <server-port>
 ```
 
-### 2.2 - Working enviroment configuration 🦺
+### 2 . 2 - Working enviroment configuration 🦺
 
 ```
-NODE_ENV=<dev-prod>
+NODE_ENV=   <dev-prod>
 ```
 
 ## 3 - Setup typescript compiler options (tsconfig.json):
@@ -139,4 +166,163 @@ tsc -w
 
 ```
 npm start
+```
+
+# Results
+
+## GET
+
+```json
+[
+  {
+    "id": "0.18973476087624297",
+    "name": "Michael Jackson Roberval",
+    "phone": "85989323895",
+    "email": "jonas@paidepet.com",
+    "date_of_birth": "1993-12-12 10:10",
+    "zip_code": "61760000",
+    "pets": []
+  }
+]
+```
+
+## GET
+
+```json
+[
+  {
+    "id": "0.18973476087624297",
+    "name": "Michael Jackson Roberval",
+    "phone": "85989323895",
+    "email": "jonas@paidepet.com",
+    "date_of_birth": "1993-12-12 10:10",
+    "zip_code": "61760000",
+    "pets": []
+  }
+]
+```
+
+## GET
+
+```json
+{
+  "id": "0.18973476087624297",
+  "name": "Michael Jackson Roberval",
+  "phone": "85989323895",
+  "email": "jonas@paidepet.com",
+  "date_of_birth": "1993-12-12 10:10",
+  "zip_code": "61760000",
+  "pets": []
+}
+```
+
+## GET
+
+```
+
+
+
+```
+
+Routes
+GET Routes
+Get all tutors: /tutors Example response
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Jonh Doe",
+    "phone": "85989323895",
+    "email": "jose.abreu@compasso.com",
+    "date_of_birth": "1993-12-12 10:10",
+    "zip_code": "61760000",
+    "pets": [
+      {
+        "id": 1,
+        "name": "Lilo",
+        "species": "dog",
+        "carry": "p",
+        "weight": 5,
+        "weight": 5,
+        "date_of_birth": "1993-12-12 10:10"
+      }
+    ]
+  }
+]
+```
+
+POST Routes
+
+/tutor Example request body (all items required):
+
+```json
+{
+  "id": 1,
+  "name": "Jonas",
+  "phone": "85989323895",
+  "email": "jonas@paidepet.com",
+  "date_of_birth": "1993-12-12 10:10",
+  "zip_code": "61760000"
+}
+```
+
+/pet/:tutorId E x a m p l e r eq u es t bod y (all it ems required):
+
+```json
+{
+  "id": 1,
+  "name": "Lilo",
+  "species": "dog",
+  "carry": "p",
+  "weight": 5,
+  "date_of_birth": "1993-12-12 10:10"
+}
+```
+
+PUT Routes
+/tutor/:id Example request body (all items required):
+
+```json
+{
+  "id": 1,
+  "name": "hallex",
+  "phone": "85989323895",
+  "email": "jose.abreu@compasso.com",
+  "date_of_birth": "1993-12-12 10:10",
+  "zip_code": "61760000"
+}
+```
+
+/pet/:petId/tutor/:tutorId request body (all items required):
+
+```json
+{
+  "id": 1,
+  "name": "Lilo",
+  "species": "dog",
+  "carry": "p",
+  "weight": 5,
+  "date_of_birth": "1993-12-12 10:10"
+}
+```
+
+```
+
+DELETE Routes:
+/tutor/:id
+
+```
+
+status code 200
+/pet/:petId/tutor/:tutorId
+status code 200
+
+```
+
+# Next Steps
+```
+
+```
+
 ```
