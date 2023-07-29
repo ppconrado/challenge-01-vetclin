@@ -75,25 +75,29 @@ export const updateTutor: RequestHandler<{ tutorID: string }> = (
 
   const updatedZipCode = (req.body as { zip_code: string }).zip_code;
 
-  const updatedPets = (req.body as { pets: Pet[] }).pets;
-
   const tutorIndex = TUTORS.findIndex((tutor) => tutor.id === tutorId);
 
   if (tutorIndex < 0) {
     throw new Error("Could not find tutor!");
   }
 
-  TUTORS[tutorIndex] = new Tutor(
+  const tutorPets = TUTORS[tutorIndex].pets;
+
+  TUTORS.splice(tutorIndex, 1);
+
+  const updatedTutor = new Tutor(
     tutorId,
     updatedName,
     updatedPhone,
     updateEmail,
     updatedDateOfBirth,
     updatedZipCode,
-    updatedPets
+    tutorPets
   );
 
-  res.json({ message: "Updated!", updatedTutor: TUTORS[tutorIndex] });
+  TUTORS.push(updatedTutor);
+
+  res.json({ message: "Updated!", updatedTutor: updatedTutor });
 };
 
 export const deleteTutor: RequestHandler<{ tutorID: string }> = (
