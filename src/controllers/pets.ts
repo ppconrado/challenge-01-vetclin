@@ -129,7 +129,7 @@ export const updatePet: RequestHandler<{ tutorID: string; petID: string }> = (
     TUTORS[tutorIndex].pets
   );
 
-  res.json({
+  res.status(200).json({
     message: "Updated!",
     updatedPet: updatedPet,
   });
@@ -141,6 +141,7 @@ export const deletePet: RequestHandler<{ tutorID: string; petID: string }> = (
   next
 ) => {
   const tutorId = req.params.tutorID;
+
   const petId = req.params.petID;
 
   const tutorIndex = TUTORS.findIndex((tutor) => tutor.id === tutorId);
@@ -159,5 +160,5 @@ export const deletePet: RequestHandler<{ tutorID: string; petID: string }> = (
 
   TUTORS[tutorIndex].pets.splice(petIndex, 1);
 
-  res.json({ message: "Pet deleted!" });
+  res.status(200).json({ message: "Pet deleted!" });
 };
