@@ -339,6 +339,83 @@ res.body ( Error Response - 500 Internal Server Error )
 }
 ```
 
+### PUT - Updates a Pet's Info - {{URL}}/pet/0.3940006850813558/tutor/0.38714229534806766
+
+• req.body
+
+```json
+{
+  "name": "Scooby",
+  "species": "dog",
+  "carry": "p",
+  "weight": 10,
+  "date_of_birth": "1993-12-12 10:10"
+}
+```
+
+• res.body ( Success Response - 201 Created )
+
+```json
+{
+  "message": "Updated!",
+  "updatedPet": {
+    "id": "0.4621236826878028",
+    "name": "Scooby",
+    "species": "dog",
+    "carry": "p",
+    "weight": 10,
+    "date_of_birth": "1993-12-12 10:10"
+  }
+}
+```
+
+```json
+[
+  {
+    "id": "0.42764763642531944",
+    "name": "Jonh Doe",
+    "phone": "85989323895",
+    "email": "johndoe@compasso.com",
+    "date_of_birth": "1993-12-12 10:10",
+    "zip_code": "8765-4322",
+    "pets": [
+      {
+        "id": "0.4621236826878028",
+        "name": "Scooby",
+        "species": "dog",
+        "carry": "p",
+        "weight": 10,
+        "date_of_birth": "1993-12-12 10:10"
+      }
+    ]
+  }
+]
+```
+
+### Deletes a Pet from a Tutor - {{URL}}/pet/0.4621236826878028/tutor/0.42764763642531944
+
+• res.body ( Success Response - 200 OK )
+
+```json
+{
+  "message": "Tutor deleted!"
+}
+```
+
+```json
+[
+  {
+    "id": "0.42764763642531944",
+    "name": "Jonh Doe",
+    "phone": "85989323895",
+    "email": "johndoe@compasso.com",
+    "date_of_birth": "1993-12-12 10:10",
+    "zip_code": "8765-4322",
+    "pets": []
+  }
+]
+```
+
 # Next Steps
 
 - interfaces
