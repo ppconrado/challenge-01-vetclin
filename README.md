@@ -94,13 +94,13 @@ https://github.com/ppconrado/challenge-01-vetclin
 
 ## 2 - Setup enviroment variables:
 
-### 2.1 - server port configuration 💻
+### 2.1 - Server port configuration 💻
 
 ```
 PORT=<server port>
 ```
 
-### 2.2 - working enviroment configuration 🦺
+### 2.2 - Working enviroment configuration 🦺
 
 ```
 NODE_ENV=<dev-prod>
