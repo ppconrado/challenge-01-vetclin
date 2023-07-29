@@ -76,50 +76,62 @@ export const updatePet: RequestHandler<{ tutorID: string; petID: string }> = (
   next
 ) => {
   const tutorId = req.params.tutorID;
+
   const petId = req.params.petID;
 
-  const updatedName = (req.body as { name: string }).name;
+  const updatePetdName = (req.body as { name: string }).name;
 
-  const updatedPhone = (req.body as { phone: string }).phone;
+  const updatePetSpecies = (req.body as { species: string }).species;
 
-  const updateEmail = (req.body as { email: string }).email;
+  const updatePetCarry = (req.body as { carry: string }).carry;
 
-  const updatedDateOfBirth = (req.body as { date_of_birth: string })
+  const updatePetWeight = (req.body as { weight: number }).weight;
+
+  const updatePetDateOfBirth = (req.body as { date_of_birth: string })
     .date_of_birth;
 
-  const updatedZipCode = (req.body as { zip_code: string }).zip_code;
-
-  const updatePets = (req.body as { pets: Pet[] }).pets;
-
-  const tutorIndex = TUTORS.findIndex((tutor) => tutor.id === tutorId);
-
-  const pets = TUTORS[tutorIndex].pets;
-
-  const petIndex = pets.findIndex((pets) => pets.id === petId);
+  const tutorIndex = TUTORS.findIndex(
+    (tutor: { id: string }) => tutor.id === tutorId
+  );
 
   if (tutorIndex < 0) {
     throw new Error("Could not find tutor!");
   }
 
+  const petIndex = TUTORS[tutorIndex].pets.findIndex(
+    (pets: { id: string }) => pets.id === petId
+  );
+
   if (petIndex < 0) {
     throw new Error("Could not find pet!");
   }
 
-  TUTORS[tutorIndex] = new Tutor(
-    TUTORS[tutorIndex].id,
-    updatedName,
-    updatedPhone,
-    updateEmail,
-    updatedDateOfBirth,
-    updatedZipCode,
-    updatePets
+  TUTORS[tutorIndex].pets.splice(petIndex, 1);
+
+  const updatedPet = new Pet(
+    petId,
+    updatePetdName,
+    updatePetSpecies,
+    updatePetCarry,
+    updatePetWeight,
+    updatePetDateOfBirth
   );
 
-  TUTORS[tutorIndex].pets[petIndex];
+  TUTORS[tutorIndex].pets.push(updatedPet);
+
+  TUTORS[tutorIndex] = new Tutor(
+    TUTORS[tutorIndex].id,
+    TUTORS[tutorIndex].name,
+    TUTORS[tutorIndex].phone,
+    TUTORS[tutorIndex].email,
+    TUTORS[tutorIndex].date_of_birth,
+    TUTORS[tutorIndex].zip_code,
+    TUTORS[tutorIndex].pets
+  );
 
   res.json({
     message: "Updated!",
-    updatedPet: TUTORS[tutorIndex].pets[petIndex],
+    updatedPet: updatedPet,
   });
 };
 
