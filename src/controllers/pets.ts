@@ -3,6 +3,7 @@ import { RequestHandler } from "express";
 import { TUTORS } from "./tutors";
 
 import { Tutor } from "../models/tutor";
+
 import { Pet } from "../models/pet";
 
 export const createPet: RequestHandler<{ tutorID: string }> = (
@@ -11,6 +12,7 @@ export const createPet: RequestHandler<{ tutorID: string }> = (
   next
 ) => {
   const tutorId = req.params.tutorID;
+
   const tutorIndex = TUTORS.findIndex((tutor) => tutor.id === tutorId);
 
   if (tutorIndex < 0) {
