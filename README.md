@@ -339,7 +339,7 @@ res.body ( Error Response - 500 Internal Server Error )
 }
 ```
 
-### PUT - Updates a Pet's Info - {{URL}}/pet/0.3940006850813558/tutor/0.38714229534806766
+### PUT - Updates a Pet's Info - {{URL}}/pet/0.4621236826878028/tutor/0.42764763642531944
 
 • req.body
 
@@ -369,6 +369,8 @@ res.body ( Error Response - 500 Internal Server Error )
 }
 ```
 
+• Tutor Updated - GET - Retrieves All Tutors - {{URL}}/tutors
+
 ```json
 [
   {
@@ -392,15 +394,17 @@ res.body ( Error Response - 500 Internal Server Error )
 ]
 ```
 
-### Deletes a Pet from a Tutor - {{URL}}/pet/0.4621236826878028/tutor/0.42764763642531944
+### DELETE - Deletes a Pet from a Tutor - {{URL}}/pet/0.4621236826878028/tutor/0.42764763642531944
 
 • res.body ( Success Response - 200 OK )
 
 ```json
 {
-  "message": "Tutor deleted!"
+  "message": "Pet deleted!"
 }
 ```
+
+• Pet Deleted - GET - Retrieves All Tutors - {{URL}}/tutors
 
 ```json
 [
