@@ -174,7 +174,7 @@ npm start
 
 ### GET - Retrieves All Tutors - {{URL}}/tutors
 
-res.body ( success response - 200 OK )
+res.body ( Success Response - 200 OK )
 
 ```json
 [
@@ -214,7 +214,7 @@ req.body
 }
 ```
 
-res.body ( success response - 201 Created )
+res.body ( Success Response - 201 Created )
 
 ```json
 {
@@ -228,7 +228,7 @@ res.body ( success response - 201 Created )
 }
 ```
 
-res.body ( error response - 500 Internal Server Error )
+res.body ( Error Response - 500 Internal Server Error )
 
 ```json
 {
@@ -250,7 +250,7 @@ req.body
 }
 ```
 
-res.body ( success response - 200 OK )
+res.body ( Success Response - 200 OK )
 
 ```json
 {
@@ -276,7 +276,7 @@ res.body ( success response - 200 OK )
 }
 ```
 
-res.body ( error response - 500 Internal Server Error )
+res.body ( Error Response - 500 Internal Server Error )
 
 ```json
 {
@@ -292,7 +292,7 @@ res.body ( error response - 500 Internal Server Error )
 }
 ```
 
-res.body ( error response - 500 Internal Server Error )
+res.body ( Error Response - 500 Internal Server Error )
 
 ```json
 {
@@ -314,7 +314,7 @@ res.body
 }
 ```
 
-## POST Creates a Pet & Adds a Tutor {localhost:3000/pet/0.7366058000978049}
+### POST - Creates a Pet & Adds a Tutor - {{URL}}/pet/0.42764763642531944
 
 req.body
 
@@ -328,7 +328,7 @@ req.body
 }
 ```
 
-res.body
+res.body ( Success Response - 201 Created )
 
 ```json
 {
@@ -350,6 +350,8 @@ res.body
   ]
 }
 ```
+
+---
 
 ## GET
 
@@ -380,68 +382,6 @@ Get all tutors: /tutors Example response
   }
 ]
 ```
-
-POST Routes
-
-/tutor Example request body (all items required):
-
-```json
-{
-  "id": 1,
-  "name": "Jonas",
-  "phone": "85989323895",
-  "email": "jonas@paidepet.com",
-  "date_of_birth": "1993-12-12 10:10",
-  "zip_code": "61760000"
-}
-```
-
-/pet/:tutorId E x a m p l e r eq u es t bod y (all it ems required):
-
-```json
-{
-  "id": 1,
-  "name": "Lilo",
-  "species": "dog",
-  "carry": "p",
-  "weight": 5,
-  "date_of_birth": "1993-12-12 10:10"
-}
-```
-
-PUT Routes
-/tutor/:id Example request body (all items required):
-
-```json
-{
-  "id": 1,
-  "name": "hallex",
-  "phone": "85989323895",
-  "email": "jose.abreu@compasso.com",
-  "date_of_birth": "1993-12-12 10:10",
-  "zip_code": "61760000"
-}
-```
-
-/pet/:petId/tutor/:tutorId request body (all items required):
-
-```json
-{
-  "id": 1,
-  "name": "Lilo",
-  "species": "dog",
-  "carry": "p",
-  "weight": 5,
-  "date_of_birth": "1993-12-12 10:10"
-}
-```
-
-DELETE Routes:
-/tutor/:id
-
-status code 200
-/pet/:petId/tutor/:tutorId
-status code 200
 
 # Next Steps
 
