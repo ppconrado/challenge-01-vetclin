@@ -53,7 +53,7 @@ export const createTutor: RequestHandler = (req, res, next) => {
 };
 
 export const getTutors: RequestHandler = (req, res, next) => {
-  res.json(TUTORS);
+  res.status(200).json(TUTORS);
 };
 
 export const updateTutor: RequestHandler<{ tutorID: string }> = (
@@ -61,7 +61,6 @@ export const updateTutor: RequestHandler<{ tutorID: string }> = (
   res,
   next
 ) => {
-  //
   const tutorId = req.params.tutorID;
 
   const updatedName = (req.body as { name: string }).name;
@@ -97,7 +96,7 @@ export const updateTutor: RequestHandler<{ tutorID: string }> = (
 
   TUTORS.push(updatedTutor);
 
-  res.json({ message: "Updated!", updatedTutor: updatedTutor });
+  res.status(200).json({ message: "Updated!", updatedTutor: updatedTutor });
 };
 
 export const deleteTutor: RequestHandler<{ tutorID: string }> = (
@@ -115,5 +114,5 @@ export const deleteTutor: RequestHandler<{ tutorID: string }> = (
 
   TUTORS.splice(tutorIndex, 1);
 
-  res.json({ message: "Tutor deleted!" });
+  res.status(200).json({ message: "Tutor deleted!" });
 };
