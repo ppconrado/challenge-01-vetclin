@@ -168,65 +168,13 @@ tsc -w
 npm start
 ```
 
+---
+
 # Results
 
-## GET
+### GET - Retrieves All Tutors - {{URL}}/tutors
 
-```json
-[
-  {
-    "id": "0.18973476087624297",
-    "name": "Michael Jackson Roberval",
-    "phone": "85989323895",
-    "email": "jonas@paidepet.com",
-    "date_of_birth": "1993-12-12 10:10",
-    "zip_code": "61760000",
-    "pets": []
-  }
-]
-```
-
-## GET
-
-```json
-[
-  {
-    "id": "0.18973476087624297",
-    "name": "Michael Jackson Roberval",
-    "phone": "85989323895",
-    "email": "jonas@paidepet.com",
-    "date_of_birth": "1993-12-12 10:10",
-    "zip_code": "61760000",
-    "pets": []
-  }
-]
-```
-
-## GET
-
-```json
-{
-  "id": "0.18973476087624297",
-  "name": "Michael Jackson Roberval",
-  "phone": "85989323895",
-  "email": "jonas@paidepet.com",
-  "date_of_birth": "1993-12-12 10:10",
-  "zip_code": "61760000",
-  "pets": []
-}
-```
-
-## GET
-
-```
-
-
-
-```
-
-Routes
-GET Routes
-Get all tutors: /tutors Example response
+• res.body ( Success Response - 200 OK )
 
 ```json
 [
@@ -252,41 +200,13 @@ Get all tutors: /tutors Example response
 ]
 ```
 
-POST Routes
+### POST - Create a New Tutor - {{URL}}/tutor
 
-/tutor Example request body (all items required):
-
-```json
-{
-  "id": 1,
-  "name": "Jonas",
-  "phone": "85989323895",
-  "email": "jonas@paidepet.com",
-  "date_of_birth": "1993-12-12 10:10",
-  "zip_code": "61760000"
-}
-```
-
-/pet/:tutorId E x a m p l e r eq u es t bod y (all it ems required):
+• req.body
 
 ```json
 {
-  "id": 1,
-  "name": "Lilo",
-  "species": "dog",
-  "carry": "p",
-  "weight": 5,
-  "date_of_birth": "1993-12-12 10:10"
-}
-```
-
-PUT Routes
-/tutor/:id Example request body (all items required):
-
-```json
-{
-  "id": 1,
-  "name": "hallex",
+  "name": "Jonh Doe",
   "phone": "85989323895",
   "email": "jose.abreu@compasso.com",
   "date_of_birth": "1993-12-12 10:10",
@@ -294,11 +214,100 @@ PUT Routes
 }
 ```
 
-/pet/:petId/tutor/:tutorId request body (all items required):
+• res.body ( Success Response - 201 Created )
 
 ```json
 {
-  "id": 1,
+  "id": "0.42764763642531944",
+  "name": "Jonh Doe",
+  "phone": "85989323895",
+  "email": "jose.abreu@compasso.com",
+  "date_of_birth": "1993-12-12 10:10",
+  "zip_code": "61760000",
+  "pets": []
+}
+```
+
+res.body ( Error Response - 500 Internal Server Error )
+
+```json
+{
+  "message": "Could not find tutor!"
+}
+```
+
+### PUT - Updates a Tutor - {{URL}}/tutor/0.42764763642531944
+
+• req.body
+
+```json
+{
+  "name": "Jonh Doe",
+  "phone": "85989323895",
+  "email": "jose.abreu@compasso.com",
+  "date_of_birth": "1993-12-12 10:10",
+  "zip_code": "61760000"
+}
+```
+
+• res.body ( Success Response - 200 OK )
+
+```json
+{
+  "message": "Updated!",
+  "updatedTutor": {
+    "id": "0.42764763642531944",
+    "name": "Jonh Doe",
+    "phone": "85989323895",
+    "email": "johndoe@compasso.com",
+    "date_of_birth": "1993-12-12 10:10",
+    "zip_code": "8765-4322",
+    "pets": [
+      {
+        "id": "0.4621236826878028",
+        "name": "Lilo",
+        "species": "dog",
+        "carry": "p",
+        "weight": 5,
+        "date_of_birth": "1993-12-12 10:10"
+      }
+    ]
+  }
+}
+```
+
+• res.body ( Error Response - 500 Internal Server Error )
+
+```json
+{
+  "message": "Could not find tutor!"
+}
+```
+
+### DELETE - Deletes a Tutor - {{URL}}/tutor/0.44084269827947664
+
+• res.body ( Success Response - 200 OK )
+
+```json
+{
+  "message": "Tutor deleted!"
+}
+```
+
+• res.body ( Error Response - 500 Internal Server Error )
+
+```json
+{
+  "message": "Could not find tutor!"
+}
+```
+
+### POST - Creates a Pet & Adds a Tutor - {{URL}}/pet/0.42764763642531944
+
+• req.body
+
+```json
+{
   "name": "Lilo",
   "species": "dog",
   "carry": "p",
@@ -307,22 +316,108 @@ PUT Routes
 }
 ```
 
+• res.body ( Success Response - 201 Created )
+
+```json
+{
+  "id": "0.42764763642531944",
+  "name": "Jonh Doe",
+  "phone": "85989323895",
+  "email": "jose.abreu@compasso.com",
+  "date_of_birth": "1993-12-12 10:10",
+  "zip_code": "61760000",
+  "pets": [
+    {
+      "id": "0.4621236826878028",
+      "name": "Lilo",
+      "species": "dog",
+      "carry": "p",
+      "weight": 5,
+      "date_of_birth": "1993-12-12 10:10"
+    }
+  ]
+}
 ```
 
-DELETE Routes:
-/tutor/:id
+### PUT - Updates a Pet's Info - {{URL}}/pet/0.3940006850813558/tutor/0.38714229534806766
 
+• req.body
+
+```json
+{
+  "name": "Scooby",
+  "species": "dog",
+  "carry": "p",
+  "weight": 10,
+  "date_of_birth": "1993-12-12 10:10"
+}
 ```
 
-status code 200
-/pet/:petId/tutor/:tutorId
-status code 200
+• res.body ( Success Response - 201 Created )
 
+```json
+{
+  "message": "Updated!",
+  "updatedPet": {
+    "id": "0.4621236826878028",
+    "name": "Scooby",
+    "species": "dog",
+    "carry": "p",
+    "weight": 10,
+    "date_of_birth": "1993-12-12 10:10"
+  }
+}
+```
+
+```json
+[
+  {
+    "id": "0.42764763642531944",
+    "name": "Jonh Doe",
+    "phone": "85989323895",
+    "email": "johndoe@compasso.com",
+    "date_of_birth": "1993-12-12 10:10",
+    "zip_code": "8765-4322",
+    "pets": [
+      {
+        "id": "0.4621236826878028",
+        "name": "Scooby",
+        "species": "dog",
+        "carry": "p",
+        "weight": 10,
+        "date_of_birth": "1993-12-12 10:10"
+      }
+    ]
+  }
+]
+```
+
+### Deletes a Pet from a Tutor - {{URL}}/pet/0.4621236826878028/tutor/0.42764763642531944
+
+• res.body ( Success Response - 200 OK )
+
+```json
+{
+  "message": "Tutor deleted!"
+}
+```
+
+```json
+[
+  {
+    "id": "0.42764763642531944",
+    "name": "Jonh Doe",
+    "phone": "85989323895",
+    "email": "johndoe@compasso.com",
+    "date_of_birth": "1993-12-12 10:10",
+    "zip_code": "8765-4322",
+    "pets": []
+  }
+]
 ```
 
 # Next Steps
-```
 
-```
-
-```
+- interfaces
+- banco de dados MongoDB
+-
