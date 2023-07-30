@@ -137,24 +137,24 @@ export const updatePet: RequestHandler<{ tutorID: string; petID: string }> = (
   });
 };
 
-export const deletePet: RequestHandler<{ tutorID: string; petID: string }> = (
+export const deletePet: RequestHandler<{ petID: string; tutorID: string }> = (
   req,
   res,
   next
 ) => {
-  const tutorId = req.params.tutorID;
-
   const petId = req.params.petID;
 
+  const tutorId = req.params.tutorID;
+
   const tutorIndex = TUTORS.findIndex((tutor) => tutor.id === tutorId);
-
-  const pets = TUTORS[tutorIndex].pets;
-
-  const petIndex = pets.findIndex((pets) => pets.id === petId);
 
   if (tutorIndex < 0) {
     throw new Error("Could not find tutor!");
   }
+
+  const pets = TUTORS[tutorIndex].pets;
+
+  const petIndex = pets.findIndex((pets) => pets.id === petId);
 
   if (petIndex < 0) {
     throw new Error("Could not find pet!");
