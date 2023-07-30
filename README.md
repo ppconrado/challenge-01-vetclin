@@ -439,16 +439,24 @@ res.body ( Error Response - 500 Internal Server Error )
 ]
 ```
 
-# Discussions
+---
+
+---
 
 ![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/POC.png)
 
+# Discussions
+
 ```
-  So far, The back-end project proved feasible. We created the models, rotas and controllers for the Tutor and Pet. Next steps will be a data bank implementation and a user's interface.
+
+- So far, The back-end project proved feasible.
+- We created the models, rotas and controllers for the Tutor and Pet.
+- Next steps will be a data bank implementation and a user's interface.
+
 ```
 
 # Next Steps
 
-- Front-End - Server-Side-Render (EJS)
+- Front-End - Server-Side-Render
 - Data Bank (NoSql) - MongoDB
 - Arquiteture - Repository and Services layers
