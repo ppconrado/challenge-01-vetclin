@@ -23,6 +23,10 @@ that the client has.
 
 ![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin-use-case-diagram.png)
 
+Please see the following resources inside this repo:
+
+- [UML Files](/documentation/UML)
+
 ---
 
 # REST API Rotas
@@ -86,6 +90,10 @@ that the client has.
 }
 ```
 
+Please see the following resources inside this repo:
+
+- [Node Project File](/package.json)
+
 ## 1 - Node.Js Project Packages (npm)
 
 ## 1 . 1 - Production Dependencies 🎉
@@ -127,6 +135,10 @@ https://www.npmjs.com/package/@types/node/v/12.12.9
 ```
 https://www.npmjs.com/package/nodemon/v/1.19.4
 ```
+
+Please see the following resources inside this repo:
+
+- [Node Project File](/package.json)
 
 ---
 
@@ -188,14 +200,6 @@ https://www.npmjs.com/package/nodemon/v/1.19.4
   "date_of_birth": "1993-12-12 10:10",
   "zip_code": "61760000",
   "pets": []
-}
-```
-
-res.body ( Error Response - 500 Internal Server Error )
-
-```json
-{
-  "message": "Could not find tutor!"
 }
 ```
 
@@ -419,13 +423,21 @@ https://github.com/ppconrado/challenge-01-vetclin
 PORT=   <server-port>
 ```
 
+Please see the following resources inside this repo:
+
+- [Enviroment Variables](/.env.example)
+
 ### 2 . 2 - Working enviroment configuration 🦺
 
 ```
 NODE_ENV=   <dev-prod>
 ```
 
-## 3 - Setup typescript compiler options (tsconfig.json):
+Please see the following resources inside this repo:
+
+- [Enviroment Variables](/.env.example)
+
+## 3 - Setup typescript compiler options:
 
 ```json
 {
@@ -441,6 +453,10 @@ NODE_ENV=   <dev-prod>
   }
 }
 ```
+
+Please see the following resources inside this repo:
+
+- [TypeScript Compiler Options - tsconfig.json](/tsconfig.json)
 
 ## 4 - Install projects dependencies (npm packages)
 
@@ -461,3 +477,9 @@ npm start
 ```
 
 ---
+
+# ⚙ Instructions to Test the Application
+
+Please see the following resources inside this repo:
+
+- [Postman File](/postman)
