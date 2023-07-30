@@ -12,6 +12,10 @@ so the sales and management team can have the primary technical view of the need
 that the client has.
 ```
 
+---
+
+---
+
 # Class Diagram
 
 ![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin-class-diagram.png)
@@ -36,6 +40,10 @@ that the client has.
 
 ---
 
+## STEP 1 - Proof Of Concept: Conduct Research and Development
+
+---
+
 # ⚙ Tools and Technologies
 
 ```
@@ -45,6 +53,12 @@ that the client has.
 • npm - Packages Manager for Node.js
 • Data Bank - RAM Computer Memory
 ```
+
+---
+
+## STEP 2 - Proof Of Concept: Specify The Need For Our Idea
+
+---
 
 # Node Project
 
@@ -173,6 +187,8 @@ npm start
 ```
 
 ---
+
+## STEP 3 - Proof Of Concept: Check Our Idea’s Feasibility
 
 # Results
 
