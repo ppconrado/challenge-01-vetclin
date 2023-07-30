@@ -42,7 +42,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n \"name\": \"MaJu\",\r\n \"phone\": \"85989323895\",\r\n \"email\": \"jonas@paidepet.com\",\r\n \"date_of_birth\": \"1993-12-12 10:10\",\r\n \"zip_code\": \"61760000\"\r\n}",
+					"raw": "\r\n  {\r\n    \"name\": \"Jonh Doe\",\r\n    \"phone\": \"85989323895\",\r\n    \"email\": \"jose.abreu@compasso.com\",\r\n    \"date_of_birth\": \"1993-12-12 10:10\",\r\n    \"zip_code\": \"61760000\"\r\n  }\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -68,7 +68,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n            \"name\": \"Joselito Goncalves Pereira\",\r\n            \"phone\": \"85989323895\",\r\n            \"email\": \"jonas@paidepet.com\",\r\n            \"date_of_birth\": \"1993-12-12 10:10\",\r\n            \"zip_code\": \"61760000\",\r\n            \"pets\": []\r\n}",
+					"raw": "{\r\n  \"name\": \"Jonh Doe\",\r\n  \"phone\": \"85989323895\",\r\n  \"email\": \"johndoe@compasso.com\",\r\n  \"date_of_birth\": \"1993-12-12 10:10\",\r\n  \"zip_code\": \"8765-4322\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -76,13 +76,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/tutor/0.5906995162487767",
+					"raw": "{{URL}}/tutor/0.4422335028115434",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"tutor",
-						"0.5906995162487767"
+						"0.4422335028115434"
 					]
 				}
 			},
@@ -94,13 +94,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/tutor/0.5906995162487767",
+					"raw": "{{URL}}/tutor/0.7425846630611008",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"tutor",
-						"0.5906995162487767"
+						"0.7425846630611008"
 					]
 				}
 			},
@@ -113,7 +113,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n \"name\": \"Scooby\",\r\n \"species\": \"dog\",\r\n \"carry\": \"p\",\r\n \"weight\": 5,\r\n \"date_of_birth\": \"1993-12-12 10:10\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Lilo\",\r\n    \"species\": \"dog\",\r\n    \"carry\": \"p\",\r\n    \"weight\": 5,\r\n    \"date_of_birth\": \"1993-12-12 10:10\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -121,13 +121,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/pet/0.465233999497902",
+					"raw": "{{URL}}/pet/0.4422335028115434",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"pet",
-						"0.465233999497902"
+						"0.4422335028115434"
 					]
 				}
 			},
@@ -140,7 +140,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"id\": \"0.465233999497902\",\r\n        \"name\": \"MaJu\",\r\n        \"phone\": \"85989323895\",\r\n        \"email\": \"jonas@paidepet.com\",\r\n        \"date_of_birth\": \"1993-12-12 10:10\",\r\n        \"zip_code\": \"61760000\",\r\n        \"pets\": [\r\n            {\r\n                \"id\": \"0.6336022923100346\",\r\n                \"name\": \"Scooby\",\r\n                \"species\": \"dog\",\r\n                \"carry\": \"p\",\r\n                \"weight\": 5,\r\n                \"date_of_birth\": \"1993-12-12 10:10\"\r\n            },\r\n            {\r\n                \"id\": \"0.9366796290851696\",\r\n                \"name\": \"Scooby\",\r\n                \"species\": \"dog\",\r\n                \"carry\": \"p\",\r\n                \"weight\": 50,\r\n                \"date_of_birth\": \"1993-12-12 10:10\"\r\n            }\r\n        ]\r\n    }",
+					"raw": "{ \r\n        \"name\": \"Scooby\",\r\n        \"species\": \"dog\",\r\n        \"carry\": \"p\",\r\n        \"weight\": 10,\r\n        \"date_of_birth\": \"1993-12-12 10:10\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -148,15 +148,15 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/pet/0.9366796290851696/tutor/0.465233999497902",
+					"raw": "{{URL}}/pet/0.6546610974537064/tutor/0.4422335028115434",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"pet",
-						"0.9366796290851696",
+						"0.6546610974537064",
 						"tutor",
-						"0.465233999497902"
+						"0.4422335028115434"
 					]
 				}
 			},
@@ -168,15 +168,15 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/pet/0.8063544490308518/tutor/0.715414955228219",
+					"raw": "{{URL}}/pet/0.6546610974537064/tutor/0.4422335028115434",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"pet",
-						"0.8063544490308518",
+						"0.6546610974537064",
 						"tutor",
-						"0.715414955228219"
+						"0.4422335028115434"
 					]
 				}
 			},
