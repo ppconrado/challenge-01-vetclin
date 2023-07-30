@@ -16,6 +16,12 @@ that the client has.
 
 ![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin-class-diagram.png)
 
+# Use Case Diagram
+
+![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin-use-case-diagram.png)
+
+---
+
 # REST API Rotas
 
 ```
@@ -28,9 +34,7 @@ that the client has.
 • DELETE/pet/:petId/tutor/:tutorId -> deletes a pet from a tutor.
 ```
 
-# Use Case Diagram
-
-![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/vetclin-use-case-diagram.png)
+---
 
 # ⚙ Tools and Technologies
 
@@ -191,7 +195,6 @@ npm start
         "name": "Lilo",
         "species": "dog",
         "carry": "p",
-        "weight": 5,
         "weight": 5,
         "date_of_birth": "1993-12-12 10:10"
       }
@@ -419,6 +422,8 @@ res.body ( Error Response - 500 Internal Server Error )
   }
 ]
 ```
+
+---
 
 # Next Steps
 
