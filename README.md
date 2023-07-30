@@ -7,7 +7,7 @@
 ```
     A client hired Compass to build a new microservice for its veterinary franchise. This microservice
 will be used by all the clinics they own for internal client and attendances management.
-So, you have this new mission, to build the POC foundations of this brand new microservice,
+So, you have this new mission, to build the POC - (Proof Of Concept) foundations of this brand new microservice,
 so the sales and management team can have the primary technical view of the needs
 that the client has.
 ```
@@ -190,7 +190,7 @@ npm start
 
 ## STEP 3 - Proof Of Concept: Check Our Idea’s Feasibility
 
-# Results
+# Tests and Outputs
 
 ### GET - Retrieves All Tutors - {{URL}}/tutors
 
@@ -439,10 +439,16 @@ res.body ( Error Response - 500 Internal Server Error )
 ]
 ```
 
----
+# Discussions
+
+![ppconrado github img](https://raw.githubusercontent.com/ppconrado/bds-assets/master/img/POC.png)
+
+```
+  So far, The back-end project proved feasible. We created the models, rotas and controllers for the Tutor and Pet. Next steps will be a data bank implementation and a user's interface.
+```
 
 # Next Steps
 
-- interfaces
-- banco de dados MongoDB
--
+- Front-End - Server-Side-Render (EJS)
+- Data Bank (NoSql) - MongoDB
+- Arquiteture - Repository and Services layers
