@@ -41,6 +41,10 @@ Please see the following resources inside this repo:
 • DELETE/pet/:petId/tutor/:tutorId -> deletes a pet from a tutor.
 ```
 
+Please see the following resources inside this repo:
+
+- [Postman File](/postman/Challenge%2001-VetClin-Jose-Conrado.postman_collection.json)
+
 ---
 
 ## STEP 1 - Proof Of Concept: Conduct Research and Development
@@ -147,6 +151,10 @@ Please see the following resources inside this repo:
 ---
 
 # Tests and Outputs
+
+Please see the following resources inside this repo:
+
+- [Postman File](/postman/Challenge%2001-VetClin-Jose-Conrado.postman_collection.json)
 
 ### GET - Retrieves All Tutors - {{URL}}/tutors
 
@@ -482,4 +490,4 @@ npm start
 
 Please see the following resources inside this repo:
 
-- [Postman File](/postman)
+- [Postman File](/postman/Challenge%2001-VetClin-Jose-Conrado.postman_collection.json)
