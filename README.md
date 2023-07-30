@@ -4,11 +4,12 @@
 
 # Description
 
-A client hired Compass to build a new microservice for its veterinary franchise.
+```A client hired Compass to build a new microservice for its veterinary franchise.
 This microservice will be used by all the clinics they own for internal client and attendances management.
 So, you have this new mission, to build the POC - (Proof Of Concept) foundations of this brand new microservice,
 so the sales and management team can have the primary technical view of the needs
 that the client has.
+```
 
 ---
 
@@ -125,63 +126,6 @@ https://www.npmjs.com/package/@types/node/v/12.12.9
 
 ```
 https://www.npmjs.com/package/nodemon/v/1.19.4
-```
-
-# ⚙ Instructions to run the application locally
-
-## 1 - Project repository location
-
-```
-https://github.com/ppconrado/challenge-01-vetclin
-```
-
-## 2 - Setup enviroment variables:
-
-### 2 . 1 - Server port configuration 💻
-
-```
-PORT=   <server-port>
-```
-
-### 2 . 2 - Working enviroment configuration 🦺
-
-```
-NODE_ENV=   <dev-prod>
-```
-
-## 3 - Setup typescript compiler options (tsconfig.json):
-
-```json
-{
-  "compilerOptions": {
-    "target": "es2018",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
-  }
-}
-```
-
-## 4 - Install projects dependencies (npm packages)
-
-```
-npm install
-```
-
-## 5 - Compile TypeScript Project to JavaScript
-
-```
-tsc -w
-```
-
-## 6 - Run the Project in JavaScript
-
-```
-npm start
 ```
 
 ---
@@ -456,3 +400,64 @@ res.body ( Error Response - 500 Internal Server Error )
 - Front-End - Server-Side-Render
 - Data Bank (NoSql) - MongoDB
 - Arquiteture - Repository and Services layers
+
+---
+
+# ⚙ Instructions to run the application locally
+
+## 1 - Project repository location
+
+```
+https://github.com/ppconrado/challenge-01-vetclin
+```
+
+## 2 - Setup enviroment variables:
+
+### 2 . 1 - Server port configuration 💻
+
+```
+PORT=   <server-port>
+```
+
+### 2 . 2 - Working enviroment configuration 🦺
+
+```
+NODE_ENV=   <dev-prod>
+```
+
+## 3 - Setup typescript compiler options (tsconfig.json):
+
+```json
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
+```
+
+## 4 - Install projects dependencies (npm packages)
+
+```
+npm install
+```
+
+## 5 - Compile TypeScript Project to JavaScript
+
+```
+tsc -w
+```
+
+## 6 - Run the Project in JavaScript
+
+```
+npm start
+```
+
+---
