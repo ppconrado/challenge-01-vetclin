@@ -411,7 +411,7 @@ Please see the following resources inside this repo:
 
 - Front-End - Server-Side-Render
 - Data Bank (NoSql) - MongoDB
-- Arquiteture - Repository and Services layers
+- Arquiteture - Repository and Service layers
 
 ---
 
@@ -464,7 +464,7 @@ Please see the following resources inside this repo:
 
 Please see the following resources inside this repo:
 
-- [TypeScript Compiler Options - tsconfig.json](/tsconfig.json)
+- [TypeScript Compiler Options](/tsconfig.json)
 
 ## 4 - Install projects dependencies (npm packages)
 
