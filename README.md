@@ -22,7 +22,7 @@ Compass Scholar:
 Jose Paulo Archetti Conrado
 ```
 
-E-mail Compass:
+Compass E-mail:
 
 ```
 jose.conrado.pb@compasso.com.br
