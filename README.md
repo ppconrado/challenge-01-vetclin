@@ -49,6 +49,7 @@ Please see the following resources inside this repo:
 
 <h1 style="text-align: left;">STEP 1 - Proof Of Concept:</h1>
 <h1 style="text-align: center;">Conduct Research and Development</h1>
+
 ---
 
 # ⚙ Tools and Technologies
@@ -65,6 +66,7 @@ Please see the following resources inside this repo:
 
 <h1 style="text-align: left;">STEP 2 - Proof Of Concept:</h1>
 <h1 style="text-align: center;">Specify The Need For Our Idea</h1>
+
 ---
 
 # Node Project
@@ -148,6 +150,8 @@ Please see the following resources inside this repo:
 
 <h1 style="text-align: left;">STEP 3 - Proof Of Concept</h1>
 <h1 style="text-align: center;">Check Our Idea’s Feasibility</h1>
+
+---
 
 # Tests and Outputs
 
