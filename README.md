@@ -46,7 +46,7 @@ Please see the following resources inside this repo:
 
 ---
 
-# REST API Rotas
+# REST API Routes
 
 ```
 • GET /tutors -> Retrieves all tutors.
@@ -59,6 +59,8 @@ Please see the following resources inside this repo:
 ```
 
 Please see the following resources inside this repo:
+
+- [REST API Routes](/src/routes/)
 
 - [Postman File](/postman/Challenge%2001-VetClin-Jose-Conrado.postman_collection.json)
 
