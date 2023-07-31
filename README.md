@@ -47,7 +47,7 @@ Please see the following resources inside this repo:
 
 ---
 
-## STEP 1 - Proof Of Concept: Conduct Research and Development
+# 🔎 STEP 1 - Proof Of Concept: Conduct Research and Development 🔎
 
 ---
 
@@ -63,7 +63,7 @@ Please see the following resources inside this repo:
 
 ---
 
-## STEP 2 - Proof Of Concept: Specify The Need For Our Idea
+# 📜 STEP 2 - Proof Of Concept: Specify The Need For Our Idea 📜
 
 ---
 
@@ -146,7 +146,7 @@ Please see the following resources inside this repo:
 
 ---
 
-## STEP 3 - Proof Of Concept: Check Our Idea’s Feasibility
+# 💡 STEP 3 - Proof Of Concept: Check Our Idea’s Feasibility 💡
 
 ---
 
@@ -415,9 +415,9 @@ Please see the following resources inside this repo:
 
 ---
 
-# ⚙ Instructions to run the application locally
+# ⚙ Instructions to Run the Application Locally
 
-## 1 - Project repository location
+## 1 - Project Repository Location
 
 ```
 https://github.com/ppconrado/challenge-01-vetclin
@@ -427,9 +427,9 @@ Please see the following resources inside this repo:
 
 - [Application Repository](/)
 
-## 2 - Setup enviroment variables:
+## 2 - Setup Environment Variables:
 
-### 2 . 1 - Server port configuration 💻
+### 2 . 1 - Server Port Configuration 💻
 
 ```
 PORT=   <server-port>
@@ -437,9 +437,9 @@ PORT=   <server-port>
 
 Please see the following resources inside this repo:
 
-- [Enviroment Variables](/.env.example)
+- [Environment Variables](/.env.example)
 
-### 2 . 2 - Working enviroment configuration 🦺
+### 2 . 2 - Working Environment Configuration 🦺
 
 ```
 NODE_ENV=   <dev-prod>
@@ -447,9 +447,9 @@ NODE_ENV=   <dev-prod>
 
 Please see the following resources inside this repo:
 
-- [Enviroment Variables](/.env.example)
+- [Environment Variables](/.env.example)
 
-## 3 - Setup typescript compiler options:
+## 3 - Setup Typescript Compiler Options:
 
 ```json
 {
