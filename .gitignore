@@ -1,4 +1,6 @@
 node_modules
 *.js
 .env
-package-lock.json
+node_modules
+*.js
+.env
