@@ -16,10 +16,16 @@ that the client has.
 
 # Project Author
 
-```
-Bolsista Compass: Jose Paulo Archetti Conrado
+Bolsista Compass:
 
-e-mail Compass: jose.conrado.pb@compasso.com.br
+```
+Jose Paulo Archetti Conrado
+```
+
+E-mail Compass:
+
+```
+jose.conrado.pb@compasso.com.br
 ```
 
 ---
