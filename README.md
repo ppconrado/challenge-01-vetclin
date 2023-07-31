@@ -60,6 +60,8 @@ Please see the following resources inside this repo:
 
 Please see the following resources inside this repo:
 
+- [Routes](/src/routes/)
+
 - [Postman File](/postman/Challenge%2001-VetClin-Jose-Conrado.postman_collection.json)
 
 ---
