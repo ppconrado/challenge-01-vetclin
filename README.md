@@ -16,7 +16,7 @@ that the client has.
 
 # Project Author
 
-Scholar Compass:
+Compass Scholar:
 
 ```
 Jose Paulo Archetti Conrado
