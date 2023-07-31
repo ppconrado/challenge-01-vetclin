@@ -423,6 +423,10 @@ Please see the following resources inside this repo:
 https://github.com/ppconrado/challenge-01-vetclin
 ```
 
+Please see the following resources inside this repo:
+
+- [Application Repository](/)
+
 ## 2 - Setup enviroment variables:
 
 ### 2 . 1 - Server port configuration 💻
