@@ -494,7 +494,9 @@ Please see the following resources inside this repo:
 
 # ⚙ Code Paths
 
+Please see the followings resources inside this repo:
+
+- [App](/src/app.ts/)
 - [Models](/src/models/)
 - [Routes](/src/routes/)
 - [Controllers](/src/controllers/)
-- [App](/src/app.ts/)
