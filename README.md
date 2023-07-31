@@ -4,11 +4,22 @@
 
 # Description
 
-```A client hired Compass to build a new microservice for its veterinary franchise.
+```
+Proof Of Concept:
+
+      A client hired Compass to build a new microservice for its veterinary franchise.
 This microservice will be used by all the clinics they own for internal client and attendances management.
-So, you have this new mission, to build the POC - (Proof Of Concept) foundations of this brand new microservice,
+      So, we have this new mission, to build the POC foundations of this brand new microservice,
 so the sales and management team can have the primary technical view of the needs
 that the client has.
+```
+
+# Project Author
+
+```
+Bolsista Compass: Jose Paulo Archetti Conrado
+
+e-mail Compass: jose.conrado.pb@compasso.com.br
 ```
 
 ---
