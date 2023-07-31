@@ -491,3 +491,10 @@ npm start
 Please see the following resources inside this repo:
 
 - [Postman File](/postman/Challenge%2001-VetClin-Jose-Conrado.postman_collection.json)
+
+# ⚙ Code Paths
+
+- [Models](/src/models/)
+- [Routes](/src/routes/)
+- [Controllers](/src/controllers/)
+- [App](/src/app.ts/)
