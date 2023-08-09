@@ -49,6 +49,10 @@ export const createTutor: RequestHandler = async (req, res, next) => {
 
 export const getTutors: RequestHandler = async (req, res, next) => {
   Tutor.find()
+    .populate({
+      path: "pets",
+      select: "",
+    })
     .then((tutors) => {
       res.status(200).json(tutors);
     })

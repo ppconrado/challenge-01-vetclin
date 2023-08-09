@@ -1,74 +1,56 @@
-// import { RequestHandler } from "express";
+import { RequestHandler } from "express";
 
-// import { TUTORS } from "./tutors";
+import { Tutor } from "../models/tutor";
+import { Pet } from "../models/pet";
 
-// import { Tutor } from "../models/tutor";
-// import { Pet } from "../models/pet";
+export const createPet: RequestHandler<{ tutorID: string }> = async (
+  req,
+  res,
+  next
+) => {
+  const tutorId = req.params.tutorID;
 
-// export const createPet: RequestHandler<{ petID: string }> = (
-//   req,
-//   res,
-//   next
-// ) => {
-//   const tutorId = req.params.petID;
-//   const tutorIndex = TUTORS.findIndex((tutor) => tutor.id === tutorId);
+  const tutor = await Tutor.findOne({ _id: tutorId });
 
-//   if (tutorIndex < 0) {
-//     throw new Error("Could not find tutor!");
-//   }
-//   //
-//   const name = (
-//     req.body as {
-//       name: string;
-//     }
-//   ).name;
+  const name = (
+    req.body as {
+      name: string;
+    }
+  ).name;
 
-//   const species = (
-//     req.body as {
-//       species: string;
-//     }
-//   ).species;
+  const species = (
+    req.body as {
+      species: string;
+    }
+  ).species;
 
-//   const carry = (
-//     req.body as {
-//       carry: string;
-//     }
-//   ).carry;
-//   const weight = (
-//     req.body as {
-//       weight: string;
-//     }
-//   ).weight;
+  const carry = (
+    req.body as {
+      carry: string;
+    }
+  ).carry;
+  const weight = (
+    req.body as {
+      weight: string;
+    }
+  ).weight;
 
-//   const date_of_birth = (
-//     req.body as {
-//       date_of_birth: string;
-//     }
-//   ).date_of_birth;
+  const date_of_birth = (
+    req.body as {
+      date_of_birth: string;
+    }
+  ).date_of_birth;
 
-//   const newPet = new Pet(
-//     Math.random().toString(),
-//     name,
-//     species,
-//     carry,
-//     weight,
-//     date_of_birth
-//   );
+  const pet = new Pet({ name, species, carry, date_of_birth, weight });
 
-//   TUTORS[tutorIndex].pets.push(newPet);
+  tutor?.pets.push(pet.id);
 
-//   TUTORS[tutorIndex] = new Tutor(
-//     TUTORS[tutorIndex].id,
-//     TUTORS[tutorIndex].name,
-//     TUTORS[tutorIndex].phone,
-//     TUTORS[tutorIndex].email,
-//     TUTORS[tutorIndex].date_of_birth,
-//     TUTORS[tutorIndex].zip_code,
-//     TUTORS[tutorIndex].pets
-//   );
+  await pet.save();
 
-//   res.status(201).json(TUTORS[tutorIndex]);
-// };
+  await tutor?.save();
+
+  res.status(201).json({ pet });
+};
 
 // export const updatePet: RequestHandler<{ tutorID: string; petID: string }> = (
 //   req,
@@ -123,29 +105,15 @@
 //   });
 // };
 
-// export const deletePet: RequestHandler<{ tutorID: string; petID: string }> = (
-//   req,
-//   res,
-//   next
-// ) => {
-//   const tutorId = req.params.tutorID;
-//   const petId = req.params.petID;
+export const deletePet: RequestHandler<{
+  tutorID: string;
+  petID: string;
+}> = async (req, res, next) => {
+  const tutorId = req.params.tutorID;
+  const petId = req.params.petID;
 
-//   const tutorIndex = TUTORS.findIndex((tutor) => tutor.id === tutorId);
+  await Tutor.findByIdAndUpdate(tutorId, { $pull: { pets: petId } });
+  await Pet.findByIdAndDelete(petId);
 
-//   const pets = TUTORS[tutorIndex].pets;
-
-//   const petIndex = pets.findIndex((pets) => pets.id === petId);
-
-//   if (tutorIndex < 0) {
-//     throw new Error("Could not find tutor!");
-//   }
-
-//   if (petIndex < 0) {
-//     throw new Error("Could not find pet!");
-//   }
-
-//   TUTORS[tutorIndex].pets.splice(petIndex, 1);
-
-//   res.json({ message: "Pet deleted!" });
-// };
+  res.json({ message: "Pet deleted!" });
+};

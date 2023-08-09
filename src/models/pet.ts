@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import mongoose, { Schema, model } from "mongoose";
 
 // 1. Create an interface representing a document in MongoDB.
 interface IPet {
@@ -7,6 +7,7 @@ interface IPet {
   carry: string;
   weight: string;
   date_of_birth: string;
+  // tutor: mongoose.Schema;
 }
 
 // 2. Create a Schema corresponding to the document interface.
@@ -16,18 +17,12 @@ export const petSchema = new Schema<IPet>({
   carry: { type: String, required: true },
   weight: { type: String, required: true },
   date_of_birth: { type: String, required: true },
+  // tutor: {
+  //   type: mongoose.Schema.ObjectId,
+  //   ref: "Tutor",
+  //   // required: true,
+  // },
 });
 
 // 3. Create a Model.
 export const Pet = model<IPet>("Pet", petSchema);
-
-// export class Pet {
-//   constructor(
-//     public id: string,
-//     public name: string,
-//     public species: string,
-//     public carry: string,
-//     public weight: string,
-//     public date_of_birth: string
-//   ) {}
-// }

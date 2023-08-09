@@ -1,13 +1,14 @@
-// import { Router } from "express";
+import { Router } from "express";
 
 // import { createPet, updatePet, deletePet } from "../controllers/pets";
+import { createPet } from "../controllers/pets";
 
-// const router = Router();
+const router = Router();
 
-// router.post("/:petID", createPet);
+router.post("/pet/:tutorID", createPet);
 
 // router.put("/:petID/tutor/:tutorID", updatePet);
 
 // router.delete("/:petID/tutor/:tutorID", deletePet);
 
-// export default router;
+export default router;
