@@ -1,7 +1,6 @@
 import { RequestHandler } from "express";
 
 import { Tutor } from "../models/tutor";
-import { Pet } from "../models/pet";
 
 export const createTutor: RequestHandler = async (req, res, next) => {
   const name = (
@@ -33,18 +32,13 @@ export const createTutor: RequestHandler = async (req, res, next) => {
     }
   ).zip_code;
 
-  // const pets = new Array<Pet>();
-
   try {
-    // const { email, username, password } = req.body;
     const tutor = new Tutor({ name, phone, email, date_of_birth, zip_code });
     tutor.save();
     res.status(201).json(tutor);
   } catch (e) {
     //
   }
-
-  // TUTORS.push(newTutor);
 };
 
 export const getTutors: RequestHandler = async (req, res, next) => {
@@ -63,45 +57,38 @@ export const getTutors: RequestHandler = async (req, res, next) => {
     });
 };
 
-// export const updateTutor: RequestHandler<{ tutorID: string }> = (
-//   req,
-//   res,
-//   next
-// ) => {
-//   //
-//   const tutorId = req.params.tutorID;
+export const updateTutor: RequestHandler<{ tutorID: string }> = async (
+  req,
+  res,
+  next
+) => {
+  //
+  const tutorId = req.params.tutorID;
 
-//   const updatedName = (req.body as { name: string }).name;
+  const nameUpdated = (req.body as { name: string }).name;
 
-//   const updatedPhone = (req.body as { phone: string }).phone;
+  const phoneUpdated = (req.body as { phone: string }).phone;
 
-//   const updateEmail = (req.body as { email: string }).email;
+  const emailUpdated = (req.body as { email: string }).email;
 
-//   const updatedDateOfBirth = (req.body as { date_of_birth: string })
-//     .date_of_birth;
+  const date_of_birthUpdated = (req.body as { date_of_birth: string })
+    .date_of_birth;
 
-//   const updatedZipCode = (req.body as { zip_code: string }).zip_code;
+  const zip_codeUpdated = (req.body as { zip_code: string }).zip_code;
 
-//   const updatedPets = (req.body as { pets: Pet[] }).pets;
+  const tutorNew = await Tutor.findByIdAndUpdate(
+    { _id: tutorId },
+    {
+      name: nameUpdated,
+      phone: phoneUpdated,
+      email: emailUpdated,
+      date_of_birth: date_of_birthUpdated,
+      zip_code: zip_codeUpdated,
+    }
+  );
 
-//   const tutorIndex = TUTORS.findIndex((tutor) => tutor.id === tutorId);
-
-//   if (tutorIndex < 0) {
-//     throw new Error("Could not find tutor!");
-//   }
-
-//   TUTORS[tutorIndex] = new Tutor(
-//     tutorId,
-//     updatedName,
-//     updatedPhone,
-//     updateEmail,
-//     updatedDateOfBirth,
-//     updatedZipCode,
-//     updatedPets
-//   );
-
-//   res.json({ message: "Updated!", updatedTutor: TUTORS[tutorIndex] });
-// };
+  res.json({ message: "Updated!", tutorNew });
+};
 
 // export const deleteTutor: RequestHandler<{ tutorID: string }> = (
 //   req,
