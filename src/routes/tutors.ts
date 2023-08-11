@@ -4,7 +4,7 @@ import {
   createTutor,
   getTutors,
   updateTutor,
-  // deleteTutor,
+  deleteTutor,
 } from "../controllers/tutors";
 
 const router = Router();
@@ -15,6 +15,6 @@ router.post("/tutor", createTutor);
 
 router.put("/tutor/:tutorID", updateTutor);
 
-// router.delete("/tutor/:tutorID", deleteTutor);
+router.delete("/tutor/:tutorID", deleteTutor);
 
 export default router;

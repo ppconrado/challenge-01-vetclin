@@ -90,20 +90,14 @@ export const updateTutor: RequestHandler<{ tutorID: string }> = async (
   res.json({ message: "Updated!", tutorNew });
 };
 
-// export const deleteTutor: RequestHandler<{ tutorID: string }> = (
-//   req,
-//   res,
-//   next
-// ) => {
-//   const tutorId = req.params.tutorID;
+export const deleteTutor: RequestHandler<{ tutorID: string }> = async (
+  req,
+  res,
+  next
+) => {
+  const tutorId = req.params.tutorID;
 
-//   const tutorIndex = TUTORS.findIndex((tutor) => tutor.id === tutorId);
+  const tutorDeleted = await Tutor.findByIdAndDelete({ _id: tutorId });
 
-//   if (tutorIndex < 0) {
-//     throw new Error("Could not find tutor!");
-//   }
-
-//   TUTORS.splice(tutorIndex, 1);
-
-//   res.json({ message: "Tutor deleted!" });
-// };
+  res.json({ message: "Tutor deleted!", tutorDeleted });
+};
