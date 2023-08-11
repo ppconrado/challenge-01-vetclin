@@ -3,7 +3,7 @@ import { Router } from "express";
 import {
   createTutor,
   getTutors,
-  // updateTutor,
+  updateTutor,
   // deleteTutor,
 } from "../controllers/tutors";
 
@@ -13,7 +13,7 @@ router.get("/tutors", getTutors);
 
 router.post("/tutor", createTutor);
 
-// router.put("/tutor/:tutorID", updateTutor);
+router.put("/tutor/:tutorID", updateTutor);
 
 // router.delete("/tutor/:tutorID", deleteTutor);
 
