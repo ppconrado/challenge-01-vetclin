@@ -112,8 +112,14 @@ export const deletePet: RequestHandler<{
   const tutorId = req.params.tutorID;
   const petId = req.params.petID;
 
-  await Tutor.findByIdAndUpdate(tutorId, { $pull: { pets: petId } });
-  await Pet.findByIdAndDelete(petId);
+  const tutor = await Tutor.findByIdAndUpdate(
+    { _id: tutorId },
+    {
+      $pull: { pets: { _id: petId } },
+    }
+  );
 
-  res.json({ message: "Pet deleted!" });
+  const pet = await Pet.findByIdAndDelete({ _id: petId });
+
+  res.json({ message: "Pet deleted!", Pet: pet, Tutor: tutor });
 };
