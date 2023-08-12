@@ -7,7 +7,6 @@ interface IPet {
   carry: string;
   weight: string;
   date_of_birth: string;
-  // tutor: mongoose.Schema;
 }
 
 // 2. Create a Schema corresponding to the document interface.
@@ -17,11 +16,6 @@ export const petSchema = new Schema<IPet>({
   carry: { type: String, required: true },
   weight: { type: String, required: true },
   date_of_birth: { type: String, required: true },
-  // tutor: {
-  //   type: mongoose.Schema.ObjectId,
-  //   ref: "Tutor",
-  //   // required: true,
-  // },
 });
 
 // 3. Create a Model.
