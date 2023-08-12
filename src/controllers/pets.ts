@@ -52,58 +52,40 @@ export const createPet: RequestHandler<{ tutorID: string }> = async (
   res.status(201).json({ pet });
 };
 
-// export const updatePet: RequestHandler<{ tutorID: string; petID: string }> = (
-//   req,
-//   res,
-//   next
-// ) => {
-//   const tutorId = req.params.tutorID;
-//   const petId = req.params.petID;
+export const updatePet: RequestHandler<{
+  tutorID: string;
+  petID: string;
+}> = async (req, res, next) => {
+  const tutorId = req.params.tutorID;
 
-//   const updatedName = (req.body as { name: string }).name;
+  const petId = req.params.petID;
 
-//   const updatedPhone = (req.body as { phone: string }).phone;
+  const updatePetName = (req.body as { name: string }).name;
 
-//   const updateEmail = (req.body as { email: string }).email;
+  const updatedPetSpecies = (req.body as { species: string }).species;
 
-//   const updatedDateOfBirth = (req.body as { date_of_birth: string })
-//     .date_of_birth;
+  const updatedPetCarry = (req.body as { carry: string }).carry;
 
-//   const updatedZipCode = (req.body as { zip_code: string }).zip_code;
+  const updatedPetWeight = (req.body as { weight: string }).weight;
 
-//   const updatePets = (req.body as { pets: Pet[] }).pets;
+  const updatedPetDateOfBirth = (req.body as { date_of_birth: string })
+    .date_of_birth;
 
-//   const tutorIndex = TUTORS.findIndex((tutor) => tutor.id === tutorId);
+  const pet = await Pet.findByIdAndUpdate(
+    { _id: petId },
+    {
+      name: updatePetName,
+      species: updatedPetSpecies,
+      carry: updatedPetCarry,
+      weight: updatedPetWeight,
+      date_of_birth: updatedPetDateOfBirth,
+    }
+  );
 
-//   const pets = TUTORS[tutorIndex].pets;
-
-//   const petIndex = pets.findIndex((pets) => pets.id === petId);
-
-//   if (tutorIndex < 0) {
-//     throw new Error("Could not find tutor!");
-//   }
-
-//   if (petIndex < 0) {
-//     throw new Error("Could not find pet!");
-//   }
-
-//   TUTORS[tutorIndex] = new Tutor(
-//     TUTORS[tutorIndex].id,
-//     updatedName,
-//     updatedPhone,
-//     updateEmail,
-//     updatedDateOfBirth,
-//     updatedZipCode,
-//     updatePets
-//   );
-
-//   TUTORS[tutorIndex].pets[petIndex];
-
-//   res.json({
-//     message: "Updated!",
-//     updatedPet: TUTORS[tutorIndex].pets[petIndex],
-//   });
-// };
+  res.json({
+    message: "Updated!",
+  });
+};
 
 export const deletePet: RequestHandler<{
   tutorID: string;
