@@ -25,7 +25,7 @@ Jose Paulo Archetti Conrado
 Compass E-mail:
 
 ```
-jose.conrado.pb@compasso.com.br
+jose.conrado@compasso.com.br
 ```
 
 ---
